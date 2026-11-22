@@ -70,6 +70,29 @@ afa serve                               # start the webhook server
   <img src="docs/assets/marketplace.svg" alt="Available and planned agents" width="100%" />
 </div>
 
+| Agent | Category | Status | Triggers | Inputs | Output | Est. time saved |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [`support_ticket`](src/agents_for_automation/agents/support_ticket/README.md) | `engineering` | `stable` | `webhook:jira`, `cli` | `--ticket`, `--json` | Pull request, Jira comment, notification | ~30m / run |
+| [`weekly_digest`](src/agents_for_automation/agents/weekly_digest/README.md) | `reporting` | `beta` | `schedule:weekly`, `cli` | `--team`, `--json` | Markdown digest via SES / Teams | ~20m / run |
+| [`invoice_extraction`](src/agents_for_automation/agents/invoice_extraction/README.md) | `parsing` | `beta` | `cli`, `webhook:invoice` | `--json`, `--text` | Validated accounting JSON payload | ~25m / run |
+| [`doc_generator`](src/agents_for_automation/agents/doc_generator/README.md) | `templates` | `beta` | `cli`, `webhook:doc` | `--template`, `--json` | Rendered Markdown document | ~35m / run |
+| [`compliance_check`](src/agents_for_automation/agents/compliance_check/README.md) | `validation` | `beta` | `cli`, `webhook:compliance` | `--ruleset`, `--json` | Compliance report & issue alert | ~30m / run |
+| [`slack_qa`](src/agents_for_automation/agents/slack_qa/README.md) | `chatops` | `beta` | `cli`, `webhook:slack` | `--question`, `--json` | Cited answer & confidence score | ~10m / run |
+
+<details>
+<summary><b>Detailed agent reference</b></summary>
+
+<br/>
+
+- **`support_ticket`** ([README](src/agents_for_automation/agents/support_ticket/README.md)) — Triages Jira Support Question (`SQ`) tickets by classifying them into Genie onboarding, bug investigation, or unknown. Routes to the target repository via `config/repos.yaml`, edits Terraform or investigates code with `ripgrep` + Bedrock, opens a GitHub PR, updates Jira, notifies via SES / Teams, and records state in `.afa_state.json` to prevent duplicate runs.
+- **`weekly_digest`** ([README](src/agents_for_automation/agents/weekly_digest/README.md)) — Aggregates processed tickets and pull requests for a team into a structured Markdown digest (`# Weekly Digest — <team>`) and dispatches it through `NotifierConnector` (SES / Teams).
+- **`invoice_extraction`** ([README](src/agents_for_automation/agents/invoice_extraction/README.md)) — Parses structured JSON or raw invoice text for `vendor`, `invoice_number`, `date`, `currency`, `subtotal`, `tax`, `total_amount`, and `line_items`. Validates required fields and line-item/subtotal/tax arithmetic, returning `VALIDATION_FAILED` on mismatches or a normalized accounting payload on success.
+- **`doc_generator`** ([README](src/agents_for_automation/agents/doc_generator/README.md)) — Renders structured Markdown documents from built-in templates (`board_resolution`, `offer_letter`, `compliance_filing`) or custom `template_text`. Validates all `{placeholder}` fields before rendering and returns `NEEDS_INFO` with `missing_fields` if any are absent.
+- **`compliance_check`** ([README](src/agents_for_automation/agents/compliance_check/README.md)) — Audits submitted document lists against built-in rulesets (`vendor_onboarding`, `release_readiness`) or custom `required_documents` for missing documents, inconsistent entity names/IDs, and expired dates. Returns `ISSUES_FOUND` and notifies via `NotifierConnector` when checks fail.
+- **`slack_qa`** ([README](src/agents_for_automation/agents/slack_qa/README.md)) — Ranks sections across internal SOPs (built-in defaults or custom `sops` list) using keyword overlap and returns the top 3 matches with exact `sources` citations and a `confidence` score, or an escalation message to `#ops-help` / on-call if no SOP matches.
+
+</details>
+
 ## Build your own agent
 
 ```bash
