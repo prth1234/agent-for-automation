@@ -8,7 +8,7 @@
 
 Every team has repetitive work: triaging tickets, extracting data from documents, drafting reports, answering the same questions. Most automations get built once, live in one person's repo, and never get reused.
 
-**AFA turns each automation into a self-contained agent module that you can install, configure and run.**
+**AFA turns each automation into a self-contained agent module that you can install, configure, and run.**
 
 <div align="center">
   <img src="docs/assets/pillars.svg" alt="Modular, config-driven, safe and measurable" width="100%" />
@@ -20,7 +20,7 @@ Every team has repetitive work: triaging tickets, extracting data from documents
   <img src="docs/assets/flow.svg" alt="Trigger to registry to agent to integrations to result" width="100%" />
 </div>
 
-A trigger arrives from a webhook, the CLI or a schedule. The registry finds the right agent by reading its `agent.yaml`. The agent does the work through shared integrations, and the result lands as a pull request, a ticket update or a notification.
+A trigger arrives from a webhook, the CLI, or a schedule. The registry finds the right agent by reading its `agent.yaml`. The agent executes through shared integrations, and the result lands as a pull request, a ticket update, or a notification.
 
 ## Example: the support ticket agent
 
@@ -39,8 +39,8 @@ Turnaround drops from about a day to minutes.
 
 1. The Jira webhook hits `POST /webhooks/jira`.
 2. The registry loads the `support_ticket` agent.
-3. The classifier labels the ticket as Genie onboarding, bug investigation or unknown.
-4. The handler finds the repo in `config/repos.yaml`, edits Terraform and opens a pull request.
+3. The classifier labels the ticket as Genie onboarding, bug investigation, or unknown.
+4. The handler finds the repo in `config/repos.yaml`, edits Terraform, and opens a pull request.
 5. Jira is updated with the PR link and the team is notified.
 6. The ticket state is stored so it is never processed twice.
 
@@ -77,14 +77,31 @@ afa list
 <details>
 <summary><b>Project structure</b></summary>
 
-```
+<br/>
+
+```text
 src/agents_for_automation/
-  core/            base classes, registry, manifest schema
-  integrations/    Jira, GitHub, LLM, email, Slack and Teams
+  core/            # base classes, registry, manifest schema
+  integrations/    # Jira, GitHub, LLM, email, Slack and Teams
   agents/
     support_ticket/
     weekly_digest/
     _template/
+```
+
+</details>
+
+<details>
+<summary><b>Development &amp; testing</b></summary>
+
+<br/>
+
+```bash
+# Run test suite
+pytest
+
+# Lint with Ruff
+ruff check .
 ```
 
 </details>

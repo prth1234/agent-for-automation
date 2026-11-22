@@ -20,10 +20,6 @@
   .cyan-s { stroke: #22D3EE; }
   .emerald { fill: #34D399; }
   .emerald-s { stroke: #34D399; }
-  .g1 { stop-color: #F1F5F9; }
-  .g2 { stop-color: #818CF8; }
-  .g3 { stop-color: #22D3EE; }
-  .g4 { stop-color: #34D399; }
   @media (prefers-color-scheme: light) {
     .fg { fill: #0F172A; }
     .mut { fill: #475569; }
@@ -35,61 +31,111 @@
     .cyan-s { stroke: #0891B2; }
     .emerald { fill: #059669; }
     .emerald-s { stroke: #059669; }
-    .g1 { stop-color: #0F172A; }
-    .g2 { stop-color: #6366F1; }
-    .g3 { stop-color: #06B6D4; }
-    .g4 { stop-color: #10B981; }
   }
-  
-  .step { opacity: 0; animation: afa-sh 14s infinite both; }
+
+  .step { opacity: 0; animation: afa-sh 12s infinite both; }
   @keyframes afa-sh {
-    0% { opacity: 0; transform: translateY(5px); }
-    5% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(4px); }
+    6% { opacity: 1; transform: translateY(0); }
     88% { opacity: 1; }
     95% { opacity: 0; }
     100% { opacity: 0; }
   }
-  .pulse { animation: afa-pl 3.5s ease-in-out infinite; }
+
+  .p-jira { animation: afa-pj 12s ease-in-out infinite; }
+  @keyframes afa-pj {
+    0%, 10% { stroke-opacity: 1; stroke-width: 2.2; }
+    58%, 68% { stroke-opacity: 1; stroke-width: 2.2; }
+    18%, 50%, 75%, 100% { stroke-opacity: 0.28; stroke-width: 1.25; }
+  }
+  .p-afa { animation: afa-pa 12s ease-in-out infinite; }
+  @keyframes afa-pa {
+    8%, 22% { stroke-opacity: 1; stroke-width: 2.2; }
+    35%, 52% { stroke-opacity: 1; stroke-width: 2.2; }
+    0%, 28%, 58%, 100% { stroke-opacity: 0.28; stroke-width: 1.25; }
+  }
+  .p-llm { animation: afa-plm 12s ease-in-out infinite; }
+  @keyframes afa-plm {
+    20%, 38% { stroke-opacity: 1; stroke-width: 2.2; }
+    0%, 14%, 44%, 100% { stroke-opacity: 0.28; stroke-width: 1.25; }
+  }
+  .p-gh { animation: afa-pgh 12s ease-in-out infinite; }
+  @keyframes afa-pgh {
+    45%, 62% { stroke-opacity: 1; stroke-width: 2.2; }
+    0%, 40%, 68%, 100% { stroke-opacity: 0.28; stroke-width: 1.25; }
+  }
+
+  .pulse { animation: afa-pl 2.4s ease-in-out infinite; }
   @keyframes afa-pl { 0%, 100% { stroke-opacity: 0.45; } 50% { stroke-opacity: 1; } }
-  
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
+    .step { opacity: 1 !important; }
   }
 </style>
+
+  <!-- Lifelines -->
   <line x1="120" y1="60" x2="120" y2="412" class="ln" stroke-dasharray="3 6"/>
   <line x1="340" y1="60" x2="340" y2="412" class="ln" stroke-dasharray="3 6"/>
   <line x1="560" y1="60" x2="560" y2="412" class="ln" stroke-dasharray="3 6"/>
   <line x1="780" y1="60" x2="780" y2="412" class="ln" stroke-dasharray="3 6"/>
 
-  <rect x="35" y="16" width="170" height="44" rx="12" class="bd"/>
+  <!-- Participant Boxes with synchronized highlight -->
+  <rect x="35" y="16" width="170" height="44" rx="12" fill="none" class="indigo-s p-jira"/>
   <text x="120" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">Jira</text>
-  <rect x="255" y="16" width="170" height="44" rx="12" class="bd"/>
+  <rect x="255" y="16" width="170" height="44" rx="12" fill="none" class="cyan-s p-afa"/>
   <text x="340" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">AFA server</text>
-  <rect x="475" y="16" width="170" height="44" rx="12" class="bd"/>
+  <rect x="475" y="16" width="170" height="44" rx="12" fill="none" class="cyan-s p-llm"/>
   <text x="560" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">LLM classifier</text>
-  <rect x="695" y="16" width="170" height="44" rx="12" class="bd"/>
+  <rect x="695" y="16" width="170" height="44" rx="12" fill="none" class="emerald-s p-gh"/>
   <text x="780" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">GitHub</text>
 
+  <!-- Step 1 -->
   <g class="step" style="animation-delay:0s">
-    <line x1="120" y1="112" x2="332" y2="112" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <path id="afa-s1" d="M120 112 L332 112" fill="none" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <circle r="4" class="indigo">
+      <animateMotion dur="1.6s" begin="0s" repeatCount="indefinite"><mpath href="#afa-s1"/></animateMotion>
+    </circle>
     <text x="230" y="100" text-anchor="middle" font-size="14" font-weight="500" class="fg">Webhook: SQ-123</text>
   </g>
+
+  <!-- Step 2 -->
   <g class="step" style="animation-delay:1.5s">
-    <line x1="340" y1="166" x2="552" y2="166" class="cyan-s" stroke-width="2" marker-end="url(#afa-seq-ar-cy)"/>
+    <path id="afa-s2" d="M340 166 L552 166" fill="none" class="cyan-s" stroke-width="2" marker-end="url(#afa-seq-ar-cy)"/>
+    <circle r="4" class="cyan">
+      <animateMotion dur="1.6s" begin="1.5s" repeatCount="indefinite"><mpath href="#afa-s2"/></animateMotion>
+    </circle>
     <text x="450" y="154" text-anchor="middle" font-size="14" font-weight="500" class="fg">Classify ticket</text>
   </g>
+
+  <!-- Step 3 -->
   <g class="step" style="animation-delay:3s">
-    <line x1="560" y1="220" x2="348" y2="220" class="cyan-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar-cy)"/>
+    <path id="afa-s3" d="M560 220 L348 220" fill="none" class="cyan-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar-cy)"/>
+    <circle r="4" class="cyan">
+      <animateMotion dur="1.6s" begin="3s" repeatCount="indefinite"><mpath href="#afa-s3"/></animateMotion>
+    </circle>
     <text x="450" y="208" text-anchor="middle" font-size="14" font-weight="500" class="fg">Genie onboarding</text>
   </g>
+
+  <!-- Step 4 -->
   <g class="step" style="animation-delay:4.5s">
-    <line x1="340" y1="274" x2="772" y2="274" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <path id="afa-s4" d="M340 274 L772 274" fill="none" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <circle r="4" class="emerald">
+      <animateMotion dur="2s" begin="4.5s" repeatCount="indefinite"><mpath href="#afa-s4"/></animateMotion>
+    </circle>
     <text x="560" y="262" text-anchor="middle" font-size="14" font-weight="500" class="fg">Open PR with Terraform change</text>
   </g>
+
+  <!-- Step 5 -->
   <g class="step" style="animation-delay:6s">
-    <line x1="340" y1="328" x2="128" y2="328" class="indigo-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar)"/>
+    <path id="afa-s5" d="M340 328 L128 328" fill="none" class="indigo-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar)"/>
+    <circle r="4" class="indigo">
+      <animateMotion dur="1.6s" begin="6s" repeatCount="indefinite"><mpath href="#afa-s5"/></animateMotion>
+    </circle>
     <text x="230" y="316" text-anchor="middle" font-size="14" font-weight="500" class="fg">PR link and notification</text>
   </g>
+
+  <!-- Step 6: Human approval -->
   <g class="step" style="animation-delay:7.5s">
     <rect x="650" y="368" width="232" height="40" rx="12" fill="none" class="emerald-s pulse" stroke-width="1.8"/>
     <text x="766" y="393" text-anchor="middle" font-size="14" font-weight="600" class="emerald">Human reviews and merges</text>
