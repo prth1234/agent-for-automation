@@ -1,0 +1,15 @@
+{
+  "question": "How do I roll back a bad production deployment?",
+  "sops": [
+    {
+      "title": "Production Deployment and Rollback",
+      "source": "sops/deployment.md",
+      "content": "## Standard Deployment\nMerge your PR to main after 2 approvals and passing CI checks.\n\n## Emergency Rollback\nTo roll back a bad production release, run `argocd app rollback prod-api` or revert the merge commit on main and notify #deployments."
+    },
+    {
+      "title": "On-Call Escalation Policy",
+      "source": "sops/oncall_escalation.md",
+      "content": "## Severity 1 Incidents\nPage the primary on-call engineer via PagerDuty and open an incident channel using `/inc open` in Slack."
+    }
+  ]
+}

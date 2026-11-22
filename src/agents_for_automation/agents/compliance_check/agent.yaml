@@ -1,0 +1,24 @@
+name: compliance_check
+version: 0.1.0
+description: Verify submitted compliance documents against built-in or custom rulesets for completeness, consistency, and expiration
+category: governance
+status: beta
+triggers:
+  - cli
+  - webhook:compliance
+permissions:
+  - docs:read
+  - ses:send
+inputs:
+  - name: ruleset
+    type: string
+    required: false
+    description: Built-in ruleset name (vendor_onboarding or release_readiness)
+    default: vendor_onboarding
+  - name: json
+    type: path
+    required: false
+    description: Path to a JSON file containing 'ruleset' (or 'required_documents') and 'documents'
+config_files: []
+estimated_time_saved_minutes: 30
+entrypoint: agent:create_agent

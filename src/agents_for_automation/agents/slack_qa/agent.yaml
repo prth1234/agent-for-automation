@@ -1,0 +1,24 @@
+name: slack_qa
+version: 0.1.0
+description: Answer Slack questions grounded in internal SOPs with exact source citations
+category: knowledge
+status: beta
+triggers:
+  - cli
+  - webhook:slack
+permissions:
+  - sop:read
+  - slack:write
+  - llm:invoke
+inputs:
+  - name: question
+    type: string
+    required: false
+    description: Question asked in Slack to answer from internal SOPs
+  - name: json
+    type: path
+    required: false
+    description: Path to a JSON file with 'question' and optional 'sops' list
+config_files: []
+estimated_time_saved_minutes: 10
+entrypoint: agent:create_agent

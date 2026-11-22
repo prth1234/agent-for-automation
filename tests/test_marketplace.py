@@ -15,9 +15,15 @@ from agents_for_automation.server import app
 
 def test_registry_discovers_marketplace_agents_and_skips_template() -> None:
     registry = AgentRegistry.discover()
-    names = [m.name for m in registry.list_agents()]
-    assert "support_ticket" in names
-    assert "weekly_digest" in names
+    names = set(m.name for m in registry.list_agents())
+    assert {
+        "support_ticket",
+        "weekly_digest",
+        "invoice_extraction",
+        "doc_generator",
+        "compliance_check",
+        "slack_qa",
+    }.issubset(names)
     assert "my_agent" not in names
 
 

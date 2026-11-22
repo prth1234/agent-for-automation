@@ -1,0 +1,29 @@
+{
+  "ruleset": "vendor_onboarding",
+  "documents": [
+    {
+      "type": "w9",
+      "entity_name": "Acme Corp",
+      "entity_id": "ENT-1001",
+      "expires_on": "2099-12-31"
+    },
+    {
+      "type": "soc2_report",
+      "entity_name": "Acme Corp",
+      "entity_id": "ENT-1001",
+      "expires_on": "2099-12-31"
+    },
+    {
+      "type": "insurance_certificate",
+      "entity_name": "Acme Corp",
+      "entity_id": "ENT-1001",
+      "expires_on": "2099-12-31"
+    },
+    {
+      "type": "msa",
+      "entity_name": "Acme Corp",
+      "entity_id": "ENT-1001",
+      "expires_on": "2099-12-31"
+    }
+  ]
+}

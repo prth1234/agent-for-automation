@@ -95,6 +95,10 @@ src/agents_for_automation/
   agents/
     support_ticket/
     weekly_digest/
+    invoice_extraction/
+    doc_generator/
+    compliance_check/
+    slack_qa/
     _template/
 ```
 

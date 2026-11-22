@@ -1,0 +1,23 @@
+{
+  "vendor": "Acme Cloud Services Inc.",
+  "invoice_number": "INV-2026-0418",
+  "date": "2026-11-15",
+  "currency": "USD",
+  "line_items": [
+    {
+      "description": "Compute cluster usage (November)",
+      "quantity": 1,
+      "unit_price": 1200.00,
+      "amount": 1200.00
+    },
+    {
+      "description": "Managed database storage",
+      "quantity": 2,
+      "unit_price": 150.00,
+      "amount": 300.00
+    }
+  ],
+  "subtotal": 1500.00,
+  "tax": 120.00,
+  "total_amount": 1620.00
+}

@@ -161,11 +161,11 @@ addEventListener("keydown",e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return
 show(0);
 // agents
 const A=[["support_ticket","stable","Triage Jira tickets, open PRs for fixes and onboarding.","Jira ticket key or webhook","Pull request and Jira update","afa run support_ticket"],
-["weekly_digest","beta","Summarise tickets, PRs and metrics into a weekly digest.","Time range","Digest notification","afa run weekly_digest"],
-["invoice_extraction","planned","Read PDFs, validate fields and push results to accounting.","PDF invoices","Validated records",""],
-["doc_generator","planned","Draft resolutions, letters and filings from templates.","Template and fields","Draft document",""],
-["compliance_check","planned","Flag missing or inconsistent documents before review.","Document set","Issue report",""],
-["slack_qa","planned","Answer staff questions from internal SOPs, with sources.","A question","Answer with sources",""]];
+["weekly_digest","beta","Summarise tickets, PRs and metrics into a weekly digest.","Time range or JSON","Digest notification","afa run weekly_digest"],
+["invoice_extraction","beta","Extract and validate invoice fields into accounting payloads.","Invoice JSON or text","Validated accounting payload","afa run invoice_extraction"],
+["doc_generator","beta","Draft resolutions, letters and filings from templates.","Template and fields","Rendered Markdown document","afa run doc_generator"],
+["compliance_check","beta","Flag missing, expired or inconsistent documents before review.","Ruleset and document list","Compliance issue report","afa run compliance_check"],
+["slack_qa","beta","Answer staff questions from internal SOPs, with sources.","Question and SOPs","Grounded answer with sources","afa run slack_qa"]];
 const col={stable:"var(--ok)",beta:"var(--warn)",planned:"var(--mut)"};let f="all";
 function draw(){const q=$("#q").value.trim().toLowerCase();const r=A.filter(a=>(f==="all"||a[1]===f)&&(a[0]+a[2]).toLowerCase().includes(q));
 $("#grid").innerHTML=r.map(a=>`<article class="card ${a[1]}" tabindex="0" style="--c:${col[a[1]]}"><h3>${a[0]}</h3><p>${a[2]}</p><span class="st">${a[1]}</span><div class="more">Takes: ${a[3]}<br>Returns: ${a[4]}${a[5]?`<br>Run: <code>${a[5]}</code>`:""}</div></article>`).join("");

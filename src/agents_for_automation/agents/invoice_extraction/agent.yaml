@@ -1,0 +1,23 @@
+name: invoice_extraction
+version: 0.1.0
+description: Extract, validate, and structure invoice data from JSON or raw text for accounting
+category: finance
+status: beta
+triggers:
+  - cli
+  - webhook:invoice
+permissions:
+  - llm:invoke
+  - accounting:write
+inputs:
+  - name: json
+    type: path
+    required: false
+    description: Path to a JSON file (or dict) containing structured invoice data
+  - name: text
+    type: string
+    required: false
+    description: Raw invoice text to parse into structured fields
+config_files: []
+estimated_time_saved_minutes: 25
+entrypoint: agent:create_agent
