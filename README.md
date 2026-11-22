@@ -11,7 +11,7 @@
 
 ## The idea
 
-Every agile team has repetitive work: triaging tickets, extracting data from documents, drafting reports, answering the same questions. Most automations get built once, live in one person's repo, and never get reused.
+Every agile team have many repetitive work: triaging tickets, extracting data from documents, drafting reports, answering the same questions. Most automations get built once, live in one person's repo, and never get reused.
 
 **AFA turns each automation into a self-contained agent module that you can install, configure, and run.**
 
