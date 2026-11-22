@@ -3,6 +3,10 @@
   <p><a href="https://prth1234.github.io/agent-for-automation/">Interactive site and agent explorer</a></p>
 </div>
 
+<div align="center">
+  <img src="docs/assets/terminal.svg" alt="AFA sample CLI session" width="100%" />
+</div>
+
 <br/>
 
 ## The idea
@@ -23,9 +27,13 @@ Every team has repetitive work: triaging tickets, extracting data from documents
 
 A trigger arrives from a webhook, the CLI, or a schedule. The registry finds the right agent by reading its `agent.yaml`. The agent executes through shared integrations, and the result lands as a pull request, a ticket update, or a notification.
 
-## Example: the support ticket agent
+## How a ticket becomes a pull request
 
 A customer raises `SQ-123`: *"Please onboard org 4821 to Genie."* The agent handles it end to end, and a human reviews the pull request before anything merges.
+
+<div align="center">
+  <img src="docs/assets/walkthrough.svg" alt="Six-step interactive walkthrough from Jira webhook to human PR review" width="100%" />
+</div>
 
 <div align="center">
   <img src="docs/assets/sequence.svg" alt="Support ticket agent sequence" width="100%" />

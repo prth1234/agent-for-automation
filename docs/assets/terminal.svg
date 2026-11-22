@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 302" width="900" height="302">
+  <style>
+    text { font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 13.5px; }
+    .hdr { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Inter, sans-serif; font-size: 13px; }
+    .fg { fill: #e6edf3; }
+    .mut { fill: #8b949e; }
+    .ok { fill: #34d399; }
+    .ac { fill: #8ea2ff; }
+    .bd { fill: none; stroke: rgba(255,255,255,0.16); stroke-width: 1.2; }
+    .sep { stroke: rgba(255,255,255,0.12); stroke-width: 1; }
+    .cur { fill: #8ea2ff; animation: term-blink 1s steps(2) infinite; }
+    .pdot { fill: #34d399; animation: term-pulse 2.2s ease-in-out infinite; }
+    @keyframes term-blink { 50% { opacity: 0; } }
+    @keyframes term-pulse { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
+
+    .cmd1 { animation: term-s1 12s infinite; }
+    .out1 { animation: term-o1 12s infinite; }
+    .cmd2 { animation: term-s2 12s infinite; }
+    .out2 { animation: term-o2 12s infinite; }
+    .cmd3 { animation: term-s3 12s infinite; }
+    .out3 { animation: term-o3 12s infinite; }
+    .cmd4 { animation: term-o4 12s infinite; }
+
+    @keyframes term-s1 { 0% { opacity: 0; } 3%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-o1 { 0%, 10% { opacity: 0; } 14%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-s2 { 0%, 24% { opacity: 0; } 28%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-o2 { 0%, 36% { opacity: 0; } 40%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-s3 { 0%, 50% { opacity: 0; } 54%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-o3 { 0%, 64% { opacity: 0; } 68%, 95% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes term-o4 { 0%, 72% { opacity: 0; } 76%, 95% { opacity: 1; } 100% { opacity: 0; } }
+
+    @media (prefers-color-scheme: light) {
+      .fg { fill: #1f2328; }
+      .mut { fill: #59636e; }
+      .ok { fill: #059669; }
+      .ac { fill: #4f46e5; }
+      .cur { fill: #4f46e5; }
+      .pdot { fill: #059669; }
+      .bd { stroke: rgba(0,0,0,0.16); }
+      .sep { stroke: rgba(0,0,0,0.12); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cmd1, .out1, .cmd2, .out2, .cmd3, .out3, .cmd4, .cur, .pdot {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <rect x="10" y="6" width="880" height="290" rx="18" class="bd"/>
+  <line x1="10" y1="46" x2="890" y2="46" class="sep"/>
+  <circle cx="32" cy="26" r="4.5" class="pdot"/>
+  <text x="46" y="30" class="hdr mut">afa — sample session</text>
+  <text x="868" y="30" text-anchor="end" class="hdr mut">dry-run safe</text>
+
+  <g class="cmd1">
+    <text x="30" y="80"><tspan class="ok">$</tspan><tspan class="fg"> afa list</tspan></text>
+  </g>
+  <g class="out1">
+    <text x="30" y="102" class="mut">support_ticket   stable   Triage Jira tickets and open PRs</text>
+    <text x="30" y="122" class="mut">weekly_digest    beta     Summarise tickets and PRs into a digest</text>
+  </g>
+
+  <g class="cmd2">
+    <text x="30" y="152"><tspan class="ok">$</tspan><tspan class="fg"> afa info support_ticket</tspan></text>
+  </g>
+  <g class="out2">
+    <text x="30" y="174" class="mut">triggers: jira webhook, cli</text>
+    <text x="30" y="194" class="mut">config:   config/repos.yaml</text>
+  </g>
+
+  <g class="cmd3">
+    <text x="30" y="224"><tspan class="ok">$</tspan><tspan class="fg"> afa run support_ticket --ticket SQ-123</tspan></text>
+  </g>
+  <g class="out3">
+    <text x="30" y="246" class="ac">classified: genie_onboarding (cco-databricks)</text>
+    <text x="30" y="266" class="ok">pull request opened, Jira updated</text>
+  </g>
+
+  <g class="cmd4">
+    <text x="30" y="286" class="ok">$</text>
+    <rect x="46" y="273" width="8" height="15" class="cur"/>
+  </g>
+</svg>
