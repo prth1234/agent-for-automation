@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/assets/hero.svg?v=3" alt="Agents for Automation" width="100%" />
+  <img src="docs/assets/hero.svg" alt="Agents for Automation" width="100%" />
 </div>
 
 <br/>
@@ -11,13 +11,13 @@ Every team has repetitive work: triaging tickets, extracting data from documents
 **AFA turns each automation into a self-contained agent module that you can install, configure and run.**
 
 <div align="center">
-  <img src="docs/assets/pillars.svg?v=3" alt="Modular, config-driven, safe and measurable" width="100%" />
+  <img src="docs/assets/pillars.svg" alt="Modular, config-driven, safe and measurable" width="100%" />
 </div>
 
 ## How it works
 
 <div align="center">
-  <img src="docs/assets/flow.svg?v=3" alt="Trigger to registry to agent to integrations to result" width="100%" />
+  <img src="docs/assets/flow.svg" alt="Trigger to registry to agent to integrations to result" width="100%" />
 </div>
 
 A trigger arrives from a webhook, the CLI or a schedule. The registry finds the right agent by reading its `agent.yaml`. The agent does the work through shared integrations, and the result lands as a pull request, a ticket update or a notification.
@@ -27,7 +27,7 @@ A trigger arrives from a webhook, the CLI or a schedule. The registry finds the 
 A customer raises `SQ-123`: *"Please onboard org 4821 to Genie."* The agent handles it end to end, and a human reviews the pull request before anything merges.
 
 <div align="center">
-  <img src="docs/assets/sequence.svg?v=3" alt="Support ticket agent sequence" width="100%" />
+  <img src="docs/assets/sequence.svg" alt="Support ticket agent sequence" width="100%" />
 </div>
 
 Turnaround drops from about a day to minutes.
@@ -58,7 +58,7 @@ afa serve                               # start the webhook server
 ## Agent marketplace
 
 <div align="center">
-  <img src="docs/assets/marketplace.svg?v=3" alt="Available and planned agents" width="100%" />
+  <img src="docs/assets/marketplace.svg" alt="Available and planned agents" width="100%" />
 </div>
 
 ## Build your own agent
@@ -99,5 +99,5 @@ src/agents_for_automation/
 <br/>
 
 <div align="center">
-  <img src="docs/assets/footer.svg?v=3" alt="Build once. Reuse everywhere." width="100%" />
+  <img src="docs/assets/footer.svg" alt="Build once. Reuse everywhere." width="100%" />
 </div>
