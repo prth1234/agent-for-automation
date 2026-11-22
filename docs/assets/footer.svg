@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120" width="900" height="120" role="img" aria-label="Build once. Reuse everywhere.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 124" width="900" height="124" role="img" aria-label="Build once. Reuse everywhere.">
   <defs>
     <linearGradient id="afa-ft-ttl" x1="0" x2="1">
       <stop class="g1" offset="0"/>
@@ -15,17 +15,9 @@
   </defs>
   <style>
   text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif; }
-  .m { font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; }
   .fg { fill: #F1F5F9; }
   .mut { fill: #94A3B8; }
-  .bd { fill: none; stroke: #94A3B8; stroke-opacity: 0.28; stroke-width: 1.25; }
-  .ln { stroke: #94A3B8; stroke-opacity: 0.22; }
-  .indigo { fill: #818CF8; }
-  .indigo-s { stroke: #818CF8; }
   .cyan { fill: #22D3EE; }
-  .cyan-s { stroke: #22D3EE; }
-  .emerald { fill: #34D399; }
-  .emerald-s { stroke: #34D399; }
   .g1 { stop-color: #F1F5F9; }
   .g2 { stop-color: #818CF8; }
   .g3 { stop-color: #22D3EE; }
@@ -33,28 +25,26 @@
   @media (prefers-color-scheme: light) {
     .fg { fill: #0F172A; }
     .mut { fill: #475569; }
-    .bd { stroke: #0F172A; stroke-opacity: 0.18; }
-    .ln { stroke: #0F172A; stroke-opacity: 0.18; }
-    .indigo { fill: #4F46E5; }
-    .indigo-s { stroke: #4F46E5; }
     .cyan { fill: #0891B2; }
-    .cyan-s { stroke: #0891B2; }
-    .emerald { fill: #059669; }
-    .emerald-s { stroke: #059669; }
     .g1 { stop-color: #0F172A; }
     .g2 { stop-color: #6366F1; }
     .g3 { stop-color: #06B6D4; }
     .g4 { stop-color: #10B981; }
   }
-  
-  .sw { animation: afa-ft-sw 5s ease-in-out infinite; }
-  @keyframes afa-ft-sw { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
-  
+
+  .trace { stroke-dasharray: 8 7; animation: afa-ft-tr 2.5s linear infinite; }
+  @keyframes afa-ft-tr { to { stroke-dashoffset: -30; } }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
 </style>
-  <rect x="200" y="14" width="500" height="2" rx="1" fill="url(#afa-ft-rule)" class="sw"/>
-  <text x="450" y="72" text-anchor="middle" font-size="36" font-weight="700" letter-spacing="-1.2" fill="url(#afa-ft-ttl)">Build once. Reuse everywhere.</text>
-  <text x="450" y="102" text-anchor="middle" font-size="15" class="mut">Add an agent, and the whole team can use it.</text>
+  <path id="afa-ft-path" d="M 200 18 L 700 18" fill="none" stroke="url(#afa-ft-rule)" class="trace" stroke-width="2" stroke-linecap="round"/>
+  <circle r="4" class="cyan">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#afa-ft-path"/>
+    </animateMotion>
+  </circle>
+  <text x="450" y="74" text-anchor="middle" font-size="36" font-weight="700" letter-spacing="-1.2" fill="url(#afa-ft-ttl)">Build once. Reuse everywhere.</text>
+  <text x="450" y="104" text-anchor="middle" font-size="15" class="mut">Add an agent, and the whole team can use it.</text>
 </svg>
