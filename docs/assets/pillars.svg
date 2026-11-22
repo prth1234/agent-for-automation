@@ -1,24 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="900" height="180" role="img" xmlns:c2pa="http://c2pa.org/manifest"><defs>
-<filter id="glow" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="5"/></filter>
-<filter id="tglow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
-<filter id="soft"><feGaussianBlur stdDeviation="2.5"/></filter>
-<linearGradient id="ttl" x1="0" x2="1"><stop class="g1" offset="0"/><stop class="g2" offset=".6"/><stop class="g3" offset="1"/></linearGradient>
-<linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#8ea2ff" stop-opacity="0"/><stop offset=".5" stop-color="#8ea2ff"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
-</defs><style>
-text{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',Helvetica,Arial,sans-serif}
-.m{font-family:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
-.fg{fill:#f0f3ff} .mut{fill:#8b94aa} .dim{fill:#6b7488}
-.bd{fill:none;stroke:#fff;stroke-opacity:.2;stroke-width:1.2}
-.ln{stroke:#fff;stroke-opacity:.14}
-.g1{stop-color:#ffffff} .g2{stop-color:#9aa8ff} .g3{stop-color:#67e8f9}
-@media (prefers-color-scheme:light){
- .fg{fill:#1f2328} .mut{fill:#59636e} .dim{fill:#818b98}
- .bd{stroke:#000;stroke-opacity:.2} .ln{stroke:#000;stroke-opacity:.16}
- .g1{stop-color:#1f2328} .g2{stop-color:#4f46e5} .g3{stop-color:#0891b2}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-.dash{stroke-dasharray:5 7;animation:fl 1.2s linear infinite}
-@keyframes fl{to{stroke-dashoffset:-12}}
-.pulse{animation:pl 4s ease-in-out infinite}
-@keyframes pl{0%,100%{opacity:.25}50%{opacity:.8}}
-</style><rect x="1" y="14" width="205" height="150" rx="20" class="bd"/><rect x="23" y="38" width="13" height="13" rx="3.5" fill="none" stroke="#8ea2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="23" y="56" width="13" height="13" rx="3.5" fill="none" stroke="#8ea2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="41" y="38" width="13" height="13" rx="3.5" fill="none" stroke="#8ea2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="41" y="56" width="13" height="13" rx="3.5" fill="none" stroke="#8ea2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="23" y="104" font-size="19" font-weight="650" letter-spacing="-.3" class="fg">Modular</text><text x="23" y="126" font-size="13" class="mut">One folder per use case.</text><text x="23" y="145" font-size="13" class="mut">Drop in, auto discovered.</text><rect x="232" y="14" width="205" height="150" rx="20" class="bd"/><path d="M254 43H285M254 53H285M254 63H285" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="276" cy="43" r="4" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="263" cy="53" r="4" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="277" cy="63" r="4" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="254" y="104" font-size="19" font-weight="650" letter-spacing="-.3" class="fg">Config-driven</text><text x="254" y="126" font-size="13" class="mut">Rules live in YAML.</text><text x="254" y="145" font-size="13" class="mut">Teams tune it, no code.</text><rect x="463" y="14" width="205" height="150" rx="20" class="bd"/><path d="M500 38L515 44V54C515 63 508 68 500 72C492 68 485 63 485 54V44Z" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M494 55L499 60L507 50" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="485" y="104" font-size="19" font-weight="650" letter-spacing="-.3" class="fg">Safe</text><text x="485" y="126" font-size="13" class="mut">Humans approve changes.</text><text x="485" y="145" font-size="13" class="mut">Least-privilege access.</text><rect x="694" y="14" width="205" height="150" rx="20" class="bd"/><path d="M719 68V56M731 68V46M743 68V38" fill="none" stroke="#fbbf24" stroke-width="4.5" stroke-linecap="round"/><text x="716" y="104" font-size="19" font-weight="650" letter-spacing="-.3" class="fg">Measurable</text><text x="716" y="126" font-size="13" class="mut">Every run logs savings.</text><text x="716" y="145" font-size="13" class="mut">ROI visible from day one.</text><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4YjRiOThlZS01ZDkxLTQ1N2EtYmU3OC02M2QyMThhYThkOTkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaAh0Inm5wysl6Zi7n2Pzfd8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5MDljMGExYS01MTg3LTRkZmEtODExMC0xZDkzZWEyYzUzYjVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoUkaAkqyNzDNbIEZCCn6dqwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg/AHMtPL4Ss02+ozbPd9QF5+pQajrZqvmQUV6ZVHZueOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaFcFFeoj0sr4tZq8aDy36qcAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIGA3jsfCl+yFLO2zSKjLmTvDYtGPxvBlyi8CQ23IoFqHZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRHBZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjhiNGI5OGVlLTVkOTEtNDU3YS1iZTc4LTYzZDIxOGFhOGQ5OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmZjNWExZjBmLTYxN2UtNGFkMC1hZWFmLTViZTFjNmI4M2ExOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD8Acy08vhKzTb6jNs931AXn6lBqOtmq+ZBRXplUdm546JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggnJ5ylmPFL2EFHdRq1mWimAW7H3Qv4OuapKRkuRI3UuCiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg0lOSWWC3JaRjunO6SbYWiJVsuHFdsoHCSL1LZCa8E750Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQOw7wQ9oEDGVUw8hyhJU7KkX5ZYe8edDaHmp1e6zaNMDtbEg2AX9HGvBEpsHvrKk06X7J9nTKOtigRw8c6W4+/E=</c2pa:manifest></metadata></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 176" width="900" height="176" role="img" aria-label="Core pillars">
+  <style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .m { font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; }
+  .fg { fill: #F1F5F9; }
+  .mut { fill: #94A3B8; }
+  .bd { fill: none; stroke: #94A3B8; stroke-opacity: 0.28; stroke-width: 1.25; }
+  .ln { stroke: #94A3B8; stroke-opacity: 0.22; }
+  .indigo { fill: #818CF8; }
+  .indigo-s { stroke: #818CF8; }
+  .cyan { fill: #22D3EE; }
+  .cyan-s { stroke: #22D3EE; }
+  .emerald { fill: #34D399; }
+  .emerald-s { stroke: #34D399; }
+  .g1 { stop-color: #F1F5F9; }
+  .g2 { stop-color: #818CF8; }
+  .g3 { stop-color: #22D3EE; }
+  .g4 { stop-color: #34D399; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #0F172A; }
+    .mut { fill: #475569; }
+    .bd { stroke: #0F172A; stroke-opacity: 0.18; }
+    .ln { stroke: #0F172A; stroke-opacity: 0.18; }
+    .indigo { fill: #4F46E5; }
+    .indigo-s { stroke: #4F46E5; }
+    .cyan { fill: #0891B2; }
+    .cyan-s { stroke: #0891B2; }
+    .emerald { fill: #059669; }
+    .emerald-s { stroke: #059669; }
+    .g1 { stop-color: #0F172A; }
+    .g2 { stop-color: #6366F1; }
+    .g3 { stop-color: #06B6D4; }
+    .g4 { stop-color: #10B981; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <rect x="2" y="12" width="206" height="152" rx="12" class="bd"/>
+  <rect x="24" y="34" width="13" height="13" rx="3" fill="none" class="indigo-s" stroke-width="1.8"/>
+  <rect x="42" y="34" width="13" height="13" rx="3" fill="none" class="indigo-s" stroke-width="1.8"/>
+  <rect x="24" y="52" width="13" height="13" rx="3" fill="none" class="indigo-s" stroke-width="1.8"/>
+  <rect x="42" y="52" width="13" height="13" rx="3" fill="none" class="indigo-s" stroke-width="1.8"/>
+  <text x="24" y="100" font-size="18.5" font-weight="600" letter-spacing="-0.3" class="fg">Modular</text>
+  <text x="24" y="124" font-size="13" class="mut">One folder per use case.</text>
+  <text x="24" y="143" font-size="13" class="mut">Drop in, auto discovered.</text>
+
+  <rect x="232" y="12" width="206" height="152" rx="12" class="bd"/>
+  <path d="M254 40H286M254 50H286M254 60H286" fill="none" class="cyan-s" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="277" cy="40" r="3.5" fill="none" class="cyan-s" stroke-width="1.8"/>
+  <circle cx="263" cy="50" r="3.5" fill="none" class="cyan-s" stroke-width="1.8"/>
+  <circle cx="278" cy="60" r="3.5" fill="none" class="cyan-s" stroke-width="1.8"/>
+  <text x="254" y="100" font-size="18.5" font-weight="600" letter-spacing="-0.3" class="fg">Config-driven</text>
+  <text x="254" y="124" font-size="13" class="mut">Rules live in YAML.</text>
+  <text x="254" y="143" font-size="13" class="mut">Teams tune it, no code.</text>
+
+  <rect x="462" y="12" width="206" height="152" rx="12" class="bd"/>
+  <path d="M500 34L514 40V50C514 59 507 64 500 68C493 64 486 59 486 50V40Z" fill="none" class="emerald-s" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M494 51L499 56L507 46" fill="none" class="emerald-s" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="484" y="100" font-size="18.5" font-weight="600" letter-spacing="-0.3" class="fg">Safe</text>
+  <text x="484" y="124" font-size="13" class="mut">Humans approve changes.</text>
+  <text x="484" y="143" font-size="13" class="mut">Least-privilege access.</text>
+
+  <rect x="692" y="12" width="206" height="152" rx="12" class="bd"/>
+  <path d="M718 65V53M730 65V43M742 65V35" fill="none" class="indigo-s" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="714" y="100" font-size="18.5" font-weight="600" letter-spacing="-0.3" class="fg">Measurable</text>
+  <text x="714" y="124" font-size="13" class="mut">Every run logs savings.</text>
+  <text x="714" y="143" font-size="13" class="mut">ROI visible from day one.</text>
+</svg>
