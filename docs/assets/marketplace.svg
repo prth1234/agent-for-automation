@@ -1,24 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" width="900" height="330" role="img" xmlns:c2pa="http://c2pa.org/manifest"><defs>
-<filter id="glow" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="5"/></filter>
-<filter id="tglow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
-<filter id="soft"><feGaussianBlur stdDeviation="2.5"/></filter>
-<linearGradient id="ttl" x1="0" x2="1"><stop class="g1" offset="0"/><stop class="g2" offset=".6"/><stop class="g3" offset="1"/></linearGradient>
-<linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#8ea2ff" stop-opacity="0"/><stop offset=".5" stop-color="#8ea2ff"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
-</defs><style>
-text{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',Helvetica,Arial,sans-serif}
-.m{font-family:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
-.fg{fill:#f0f3ff} .mut{fill:#8b94aa} .dim{fill:#6b7488}
-.bd{fill:none;stroke:#fff;stroke-opacity:.2;stroke-width:1.2}
-.ln{stroke:#fff;stroke-opacity:.14}
-.g1{stop-color:#ffffff} .g2{stop-color:#9aa8ff} .g3{stop-color:#67e8f9}
-@media (prefers-color-scheme:light){
- .fg{fill:#1f2328} .mut{fill:#59636e} .dim{fill:#818b98}
- .bd{stroke:#000;stroke-opacity:.2} .ln{stroke:#000;stroke-opacity:.16}
- .g1{stop-color:#1f2328} .g2{stop-color:#4f46e5} .g3{stop-color:#0891b2}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-.dash{stroke-dasharray:5 7;animation:fl 1.2s linear infinite}
-@keyframes fl{to{stroke-dashoffset:-12}}
-.pulse{animation:pl 4s ease-in-out infinite}
-@keyframes pl{0%,100%{opacity:.25}50%{opacity:.8}}
-.gl{animation:pl 4s ease-in-out infinite}</style><rect class="gl" x="2" y="10" width="282" height="140" rx="20" fill="none" stroke="#34d399" stroke-width="2" filter="url(#glow)"/><rect x="2" y="10" width="282" height="140" rx="20" class="bd" style="stroke:#34d399;stroke-opacity:.6"/><text class="m fg" x="22" y="48" font-size="16" font-weight="600">support_ticket</text><text x="22" y="76" font-size="13" class="mut">Triage Jira tickets, open PRs for</text><text x="22" y="94" font-size="13" class="mut">fixes and onboarding.</text><rect x="22" y="110" width="66" height="24" rx="12" fill="#34d399" fill-opacity=".14" stroke="#34d399" stroke-opacity=".6"/><text x="55.0" y="126" text-anchor="middle" font-size="12" font-weight="600" fill="#34d399">stable</text><text class="m mut" x="264" y="126" text-anchor="end" font-size="11">afa run support_ticket</text><rect class="gl" x="309" y="10" width="282" height="140" rx="20" fill="none" stroke="#fbbf24" stroke-width="2" filter="url(#glow)"/><rect x="309" y="10" width="282" height="140" rx="20" class="bd" style="stroke:#fbbf24;stroke-opacity:.6"/><text class="m fg" x="329" y="48" font-size="16" font-weight="600">weekly_digest</text><text x="329" y="76" font-size="13" class="mut">Summarise tickets, PRs and metrics</text><text x="329" y="94" font-size="13" class="mut">into a weekly digest.</text><rect x="329" y="110" width="52" height="24" rx="12" fill="#fbbf24" fill-opacity=".14" stroke="#fbbf24" stroke-opacity=".6"/><text x="355.0" y="126" text-anchor="middle" font-size="12" font-weight="600" fill="#fbbf24">beta</text><text class="m mut" x="571" y="126" text-anchor="end" font-size="11">afa run weekly_digest</text><rect x="616" y="10" width="282" height="140" rx="20" class="bd" style=""/><text class="m mut" x="636" y="48" font-size="16" font-weight="600">invoice_extraction</text><text x="636" y="76" font-size="13" class="mut">Read PDFs, validate fields, push</text><text x="636" y="94" font-size="13" class="mut">results to accounting.</text><rect x="636" y="110" width="73" height="24" rx="12" fill="#818b98" fill-opacity=".14" stroke="#818b98" stroke-opacity=".6"/><text x="672.5" y="126" text-anchor="middle" font-size="12" font-weight="600" fill="#818b98">planned</text><rect x="2" y="170" width="282" height="140" rx="20" class="bd" style=""/><text class="m mut" x="22" y="208" font-size="16" font-weight="600">doc_generator</text><text x="22" y="236" font-size="13" class="mut">Draft resolutions, letters and</text><text x="22" y="254" font-size="13" class="mut">filings from templates.</text><rect x="22" y="270" width="73" height="24" rx="12" fill="#818b98" fill-opacity=".14" stroke="#818b98" stroke-opacity=".6"/><text x="58.5" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#818b98">planned</text><rect x="309" y="170" width="282" height="140" rx="20" class="bd" style=""/><text class="m mut" x="329" y="208" font-size="16" font-weight="600">compliance_check</text><text x="329" y="236" font-size="13" class="mut">Flag missing or inconsistent</text><text x="329" y="254" font-size="13" class="mut">documents before review.</text><rect x="329" y="270" width="73" height="24" rx="12" fill="#818b98" fill-opacity=".14" stroke="#818b98" stroke-opacity=".6"/><text x="365.5" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#818b98">planned</text><rect x="616" y="170" width="282" height="140" rx="20" class="bd" style=""/><text class="m mut" x="636" y="208" font-size="16" font-weight="600">slack_qa</text><text x="636" y="236" font-size="13" class="mut">Answer staff questions from SOPs,</text><text x="636" y="254" font-size="13" class="mut">with sources.</text><rect x="636" y="270" width="73" height="24" rx="12" fill="#818b98" fill-opacity=".14" stroke="#818b98" stroke-opacity=".6"/><text x="672.5" y="286" text-anchor="middle" font-size="12" font-weight="600" fill="#818b98">planned</text><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyNDU5YThhMS1hMzlkLTQ0NjYtYjg1YS0zMzhlNzFiOTljZDUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaBjJ822w5Hp7iZgus12v5n0AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5NDRlNmM3My0zZmM5LTQ0YTYtOGE5ZS0yOGM3MTdlZjU2YWJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoZVEyfM97Dmx/CdLu/H0hKAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg6/a1plRxEZlMzHzk5JtLJrW4B1o8eWe/gdKBNpEEi/SkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLKDKl3I2h1648U/9MjmxzkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBB5JtQvUxFxa8/7lHM9/yF8/ycQRcerxfQuquCFrSaxZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRYJZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjI0NTlhOGExLWEzOWQtNDQ2Ni1iODVhLTMzOGU3MWI5OWNkNS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjVmYjhkOGI0LTcyZWYtNDIzZi05NjExLWI5ZGZmZjgwYzJlMXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDr9rWmVHERmUzMfOTkm0smtbgHWjx5Z7+B0oE2kQSL9KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggpedUqsnFXR3oFPwWYLg8XDfYSRQ5krJ5Z8vk0An2jiiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVn21aXi8TnEvFNYwI4AmcNWYRkHEhI1Hj3j96v4K+Uh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQNQqOybr4fqSbc6JbBUQVc0vNAAYlWaV1Gyw31Z8XLHVcY82hAEmV6QD6R9xcpR2oUozQQq+S3A9atuJB2ZHkzo=</c2pa:manifest></metadata></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 326" width="900" height="326" role="img" aria-label="Agent marketplace">
+  <style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .m { font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; }
+  .fg { fill: #F1F5F9; }
+  .mut { fill: #94A3B8; }
+  .bd { fill: none; stroke: #94A3B8; stroke-opacity: 0.28; stroke-width: 1.25; }
+  .ln { stroke: #94A3B8; stroke-opacity: 0.22; }
+  .indigo { fill: #818CF8; }
+  .indigo-s { stroke: #818CF8; }
+  .cyan { fill: #22D3EE; }
+  .cyan-s { stroke: #22D3EE; }
+  .emerald { fill: #34D399; }
+  .emerald-s { stroke: #34D399; }
+  .g1 { stop-color: #F1F5F9; }
+  .g2 { stop-color: #818CF8; }
+  .g3 { stop-color: #22D3EE; }
+  .g4 { stop-color: #34D399; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #0F172A; }
+    .mut { fill: #475569; }
+    .bd { stroke: #0F172A; stroke-opacity: 0.18; }
+    .ln { stroke: #0F172A; stroke-opacity: 0.18; }
+    .indigo { fill: #4F46E5; }
+    .indigo-s { stroke: #4F46E5; }
+    .cyan { fill: #0891B2; }
+    .cyan-s { stroke: #0891B2; }
+    .emerald { fill: #059669; }
+    .emerald-s { stroke: #059669; }
+    .g1 { stop-color: #0F172A; }
+    .g2 { stop-color: #6366F1; }
+    .g3 { stop-color: #06B6D4; }
+    .g4 { stop-color: #10B981; }
+  }
+  
+  .pulse { animation: afa-pl 3.5s ease-in-out infinite; }
+  @keyframes afa-pl { 0%, 100% { stroke-opacity: 0.45; } 50% { stroke-opacity: 1; } }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <!-- Row 1 -->
+  <rect x="2" y="10" width="284" height="142" rx="12" fill="none" class="emerald-s pulse" stroke-width="1.5"/>
+  <text class="m fg" x="22" y="44" font-size="16" font-weight="600">support_ticket</text>
+  <text x="22" y="72" font-size="13" class="mut">Triage Jira tickets, open PRs for</text>
+  <text x="22" y="90" font-size="13" class="mut">fixes and onboarding.</text>
+  <rect x="22" y="110" width="68" height="24" rx="12" fill="none" class="emerald-s" stroke-width="1.2"/>
+  <text x="56" y="126.5" text-anchor="middle" font-size="12.5" font-weight="600" class="emerald">stable</text>
+  <text class="m mut" x="266" y="126.5" text-anchor="end" font-size="12.5">afa run support_ticket</text>
+
+  <rect x="308" y="10" width="284" height="142" rx="12" fill="none" class="cyan-s pulse" stroke-width="1.5"/>
+  <text class="m fg" x="328" y="44" font-size="16" font-weight="600">weekly_digest</text>
+  <text x="328" y="72" font-size="13" class="mut">Summarise tickets, PRs and metrics</text>
+  <text x="328" y="90" font-size="13" class="mut">into a weekly digest.</text>
+  <rect x="328" y="110" width="56" height="24" rx="12" fill="none" class="cyan-s" stroke-width="1.2"/>
+  <text x="356" y="126.5" text-anchor="middle" font-size="12.5" font-weight="600" class="cyan">beta</text>
+  <text class="m mut" x="572" y="126.5" text-anchor="end" font-size="12.5">afa run weekly_digest</text>
+
+  <rect x="614" y="10" width="284" height="142" rx="12" class="bd"/>
+  <text class="m mut" x="634" y="44" font-size="16" font-weight="600">invoice_extraction</text>
+  <text x="634" y="72" font-size="13" class="mut">Read PDFs, validate fields, push</text>
+  <text x="634" y="90" font-size="13" class="mut">results to accounting.</text>
+  <rect x="634" y="110" width="78" height="24" rx="12" class="bd"/>
+  <text x="673" y="126.5" text-anchor="middle" font-size="12.5" font-weight="600" class="mut">planned</text>
+
+  <!-- Row 2 -->
+  <rect x="2" y="172" width="284" height="142" rx="12" class="bd"/>
+  <text class="m mut" x="22" y="206" font-size="16" font-weight="600">doc_generator</text>
+  <text x="22" y="234" font-size="13" class="mut">Draft resolutions, letters and</text>
+  <text x="22" y="252" font-size="13" class="mut">filings from templates.</text>
+  <rect x="22" y="272" width="78" height="24" rx="12" class="bd"/>
+  <text x="61" y="288.5" text-anchor="middle" font-size="12.5" font-weight="600" class="mut">planned</text>
+
+  <rect x="308" y="172" width="284" height="142" rx="12" class="bd"/>
+  <text class="m mut" x="328" y="206" font-size="16" font-weight="600">compliance_check</text>
+  <text x="328" y="234" font-size="13" class="mut">Flag missing or inconsistent</text>
+  <text x="328" y="252" font-size="13" class="mut">documents before review.</text>
+  <rect x="328" y="272" width="78" height="24" rx="12" class="bd"/>
+  <text x="367" y="288.5" text-anchor="middle" font-size="12.5" font-weight="600" class="mut">planned</text>
+
+  <rect x="614" y="172" width="284" height="142" rx="12" class="bd"/>
+  <text class="m mut" x="634" y="206" font-size="16" font-weight="600">slack_qa</text>
+  <text x="634" y="234" font-size="13" class="mut">Answer staff questions from SOPs,</text>
+  <text x="634" y="252" font-size="13" class="mut">with sources.</text>
+  <rect x="634" y="272" width="78" height="24" rx="12" class="bd"/>
+  <text x="673" y="288.5" text-anchor="middle" font-size="12.5" font-weight="600" class="mut">planned</text>
+</svg>

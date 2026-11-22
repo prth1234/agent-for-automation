@@ -1,25 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" role="img" xmlns:c2pa="http://c2pa.org/manifest"><defs>
-<filter id="glow" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="5"/></filter>
-<filter id="tglow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
-<filter id="soft"><feGaussianBlur stdDeviation="2.5"/></filter>
-<linearGradient id="ttl" x1="0" x2="1"><stop class="g1" offset="0"/><stop class="g2" offset=".6"/><stop class="g3" offset="1"/></linearGradient>
-<linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#8ea2ff" stop-opacity="0"/><stop offset=".5" stop-color="#8ea2ff"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></linearGradient>
-</defs><style>
-text{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',Helvetica,Arial,sans-serif}
-.m{font-family:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
-.fg{fill:#f0f3ff} .mut{fill:#8b94aa} .dim{fill:#6b7488}
-.bd{fill:none;stroke:#fff;stroke-opacity:.2;stroke-width:1.2}
-.ln{stroke:#fff;stroke-opacity:.14}
-.g1{stop-color:#ffffff} .g2{stop-color:#9aa8ff} .g3{stop-color:#67e8f9}
-@media (prefers-color-scheme:light){
- .fg{fill:#1f2328} .mut{fill:#59636e} .dim{fill:#818b98}
- .bd{stroke:#000;stroke-opacity:.2} .ln{stroke:#000;stroke-opacity:.16}
- .g1{stop-color:#1f2328} .g2{stop-color:#4f46e5} .g3{stop-color:#0891b2}
-}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-.dash{stroke-dasharray:5 7;animation:fl 1.2s linear infinite}
-@keyframes fl{to{stroke-dashoffset:-12}}
-.pulse{animation:pl 4s ease-in-out infinite}
-@keyframes pl{0%,100%{opacity:.25}50%{opacity:.8}}
-.s{opacity:0;animation:sh 15s infinite both}
-@keyframes sh{0%{opacity:0;transform:translateY(6px)}4%{opacity:1;transform:translateY(0)}88%{opacity:1}95%{opacity:0}100%{opacity:0}}</style><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 1 L10 5 L0 9z" fill="#9aa8ff"/></marker><line x1="120" y1="62" x2="120" y2="420" class="ln" stroke-dasharray="3 7"/><line x1="340" y1="62" x2="340" y2="420" class="ln" stroke-dasharray="3 7"/><line x1="560" y1="62" x2="560" y2="420" class="ln" stroke-dasharray="3 7"/><line x1="780" y1="62" x2="780" y2="420" class="ln" stroke-dasharray="3 7"/><rect x="35" y="18" width="170" height="44" rx="16" class="bd"/><text x="120" y="46" text-anchor="middle" font-size="16" font-weight="600" class="fg">Jira</text><rect x="255" y="18" width="170" height="44" rx="16" class="bd"/><text x="340" y="46" text-anchor="middle" font-size="16" font-weight="600" class="fg">AFA server</text><rect x="475" y="18" width="170" height="44" rx="16" class="bd"/><text x="560" y="46" text-anchor="middle" font-size="16" font-weight="600" class="fg">LLM classifier</text><rect x="695" y="18" width="170" height="44" rx="16" class="bd"/><text x="780" y="46" text-anchor="middle" font-size="16" font-weight="600" class="fg">GitHub</text><g class="s" style="animation-delay:0.0s"><line x1="120" y1="115" x2="332" y2="115" stroke="#9aa8ff" stroke-width="2" marker-end="url(#ar)"/><text x="230.0" y="103" text-anchor="middle" font-size="14" font-weight="500" class="fg">Webhook: SQ-123</text></g><g class="s" style="animation-delay:1.6s"><line x1="340" y1="170" x2="552" y2="170" stroke="#9aa8ff" stroke-width="2" marker-end="url(#ar)"/><text x="450.0" y="158" text-anchor="middle" font-size="14" font-weight="500" class="fg">Classify ticket</text></g><g class="s" style="animation-delay:3.2s"><line x1="560" y1="225" x2="348" y2="225" stroke="#9aa8ff" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ar)"/><text x="450.0" y="213" text-anchor="middle" font-size="14" font-weight="500" class="fg">Genie onboarding</text></g><g class="s" style="animation-delay:4.800000000000001s"><line x1="340" y1="280" x2="772" y2="280" stroke="#9aa8ff" stroke-width="2" marker-end="url(#ar)"/><text x="560.0" y="268" text-anchor="middle" font-size="14" font-weight="500" class="fg">Open PR with Terraform change</text></g><g class="s" style="animation-delay:6.4s"><line x1="340" y1="335" x2="128" y2="335" stroke="#9aa8ff" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ar)"/><text x="230.0" y="323" text-anchor="middle" font-size="14" font-weight="500" class="fg">PR link and notification</text></g><g class="s" style="animation-delay:8s"><rect x="650" y="372" width="230" height="40" rx="20" fill="none" stroke="#34d399" stroke-width="2" filter="url(#glow)" class="pulse"/><rect x="650" y="372" width="230" height="40" rx="20" fill="none" stroke="#34d399" stroke-opacity=".85" stroke-width="1.2"/><text x="765" y="397" text-anchor="middle" font-size="14.5" font-weight="600" fill="#34d399">Human reviews and merges</text></g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkNzI2NTYxOC05Zjc2LTRlYWMtYjRiNi0zZTA0OTk5YWNlZTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaITQr1KmCiKR5GUMs/pAQCUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmOTcxZWFhOC0wNmIxLTQ5YjEtODFkMS0yM2U2YTViZGYxMDlscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNonr2rikm20E2zDD0gtKkeJQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgguBWFG8DQbycRjXYuxEMcDQ+51FzIB1a11resMBR8TiKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaEiErCj28b213czU1k3lv5oAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIFwkhx8SrzgsXjF8JEqNxkCfjr52ww+7DVf3BsVn6iziZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GRLfZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmQ3MjY1NjE4LTlmNzYtNGVhYy1iNGI2LTNlMDQ5OTlhY2VlMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjU5ZWMwNGZhLTdkZjAtNDc0YS05OGQ2LTZhNzNkNzUxNDk0YnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC4FYUbwNBvJxGNdi7EQxwND7nUXMgHVrXWt6wwFHxOIqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggJQ9Fn9qhyS3+fWEuDku3qV4pOayMrM0CKopwRDUA3ruiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggRvzisHKsXVkiZ/5cBuEiq9fUKI3tEQSydvM1YjDaUuF0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQG08a7pIh401exYIlt0AOB8sH/WF5bvDK/vKfOjcamfv/VX526OZ366pz/5rPvkBx7Am2Rqklsqbr7a4Qe3kzt8=</c2pa:manifest></metadata></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 432" width="900" height="432" role="img" aria-label="Support ticket agent sequence">
+  <defs>
+    <marker id="afa-seq-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 1 L10 5 L0 9 z" fill="#818CF8"/>
+    </marker>
+    <marker id="afa-seq-ar-cy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 1 L10 5 L0 9 z" fill="#22D3EE"/>
+    </marker>
+  </defs>
+  <style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif; }
+  .m { font-family: 'SF Mono', ui-monospace, Menlo, Consolas, monospace; }
+  .fg { fill: #F1F5F9; }
+  .mut { fill: #94A3B8; }
+  .bd { fill: none; stroke: #94A3B8; stroke-opacity: 0.28; stroke-width: 1.25; }
+  .ln { stroke: #94A3B8; stroke-opacity: 0.22; }
+  .indigo { fill: #818CF8; }
+  .indigo-s { stroke: #818CF8; }
+  .cyan { fill: #22D3EE; }
+  .cyan-s { stroke: #22D3EE; }
+  .emerald { fill: #34D399; }
+  .emerald-s { stroke: #34D399; }
+  .g1 { stop-color: #F1F5F9; }
+  .g2 { stop-color: #818CF8; }
+  .g3 { stop-color: #22D3EE; }
+  .g4 { stop-color: #34D399; }
+  @media (prefers-color-scheme: light) {
+    .fg { fill: #0F172A; }
+    .mut { fill: #475569; }
+    .bd { stroke: #0F172A; stroke-opacity: 0.18; }
+    .ln { stroke: #0F172A; stroke-opacity: 0.18; }
+    .indigo { fill: #4F46E5; }
+    .indigo-s { stroke: #4F46E5; }
+    .cyan { fill: #0891B2; }
+    .cyan-s { stroke: #0891B2; }
+    .emerald { fill: #059669; }
+    .emerald-s { stroke: #059669; }
+    .g1 { stop-color: #0F172A; }
+    .g2 { stop-color: #6366F1; }
+    .g3 { stop-color: #06B6D4; }
+    .g4 { stop-color: #10B981; }
+  }
+  
+  .step { opacity: 0; animation: afa-sh 14s infinite both; }
+  @keyframes afa-sh {
+    0% { opacity: 0; transform: translateY(5px); }
+    5% { opacity: 1; transform: translateY(0); }
+    88% { opacity: 1; }
+    95% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .pulse { animation: afa-pl 3.5s ease-in-out infinite; }
+  @keyframes afa-pl { 0%, 100% { stroke-opacity: 0.45; } 50% { stroke-opacity: 1; } }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+  <line x1="120" y1="60" x2="120" y2="412" class="ln" stroke-dasharray="3 6"/>
+  <line x1="340" y1="60" x2="340" y2="412" class="ln" stroke-dasharray="3 6"/>
+  <line x1="560" y1="60" x2="560" y2="412" class="ln" stroke-dasharray="3 6"/>
+  <line x1="780" y1="60" x2="780" y2="412" class="ln" stroke-dasharray="3 6"/>
+
+  <rect x="35" y="16" width="170" height="44" rx="12" class="bd"/>
+  <text x="120" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">Jira</text>
+  <rect x="255" y="16" width="170" height="44" rx="12" class="bd"/>
+  <text x="340" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">AFA server</text>
+  <rect x="475" y="16" width="170" height="44" rx="12" class="bd"/>
+  <text x="560" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">LLM classifier</text>
+  <rect x="695" y="16" width="170" height="44" rx="12" class="bd"/>
+  <text x="780" y="44" text-anchor="middle" font-size="16" font-weight="600" class="fg">GitHub</text>
+
+  <g class="step" style="animation-delay:0s">
+    <line x1="120" y1="112" x2="332" y2="112" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <text x="230" y="100" text-anchor="middle" font-size="14" font-weight="500" class="fg">Webhook: SQ-123</text>
+  </g>
+  <g class="step" style="animation-delay:1.5s">
+    <line x1="340" y1="166" x2="552" y2="166" class="cyan-s" stroke-width="2" marker-end="url(#afa-seq-ar-cy)"/>
+    <text x="450" y="154" text-anchor="middle" font-size="14" font-weight="500" class="fg">Classify ticket</text>
+  </g>
+  <g class="step" style="animation-delay:3s">
+    <line x1="560" y1="220" x2="348" y2="220" class="cyan-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar-cy)"/>
+    <text x="450" y="208" text-anchor="middle" font-size="14" font-weight="500" class="fg">Genie onboarding</text>
+  </g>
+  <g class="step" style="animation-delay:4.5s">
+    <line x1="340" y1="274" x2="772" y2="274" class="indigo-s" stroke-width="2" marker-end="url(#afa-seq-ar)"/>
+    <text x="560" y="262" text-anchor="middle" font-size="14" font-weight="500" class="fg">Open PR with Terraform change</text>
+  </g>
+  <g class="step" style="animation-delay:6s">
+    <line x1="340" y1="328" x2="128" y2="328" class="indigo-s" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#afa-seq-ar)"/>
+    <text x="230" y="316" text-anchor="middle" font-size="14" font-weight="500" class="fg">PR link and notification</text>
+  </g>
+  <g class="step" style="animation-delay:7.5s">
+    <rect x="650" y="368" width="232" height="40" rx="12" fill="none" class="emerald-s pulse" stroke-width="1.8"/>
+    <text x="766" y="393" text-anchor="middle" font-size="14" font-weight="600" class="emerald">Human reviews and merges</text>
+  </g>
+</svg>
