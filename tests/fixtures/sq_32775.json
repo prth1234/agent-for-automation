@@ -1,0 +1,10 @@
+{
+  "ticket_key": "SQ-32775",
+  "summary": "enable FlexAI on NAM org 60030",
+  "description": "Hello, We're in a competitive POC and team has made note that showcasing the FlexAI will be needed/helpful/winning. They are aware it's early access and are okay with that. Please enable FlexAI for NAM org 60030 Thanks!",
+  "assignee": "Parth Singh",
+  "reporter": "Sam Ramirez",
+  "team": "Thorium",
+  "org_id": "60030",
+  "comments": []
+}

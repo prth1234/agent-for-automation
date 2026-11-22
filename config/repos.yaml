@@ -1,0 +1,42 @@
+repos:
+  cco-databricks:
+    github_repo: flexera/cco-databricks
+    local_path: /Users/psingh/Desktop/Workyard/cco-databricks
+    base_branch: main
+    description: >
+      Databricks infrastructure and Terraform repository. Manages Flexera Assistant
+      Genie Spaces per org ID across environments via var.genie_org_ids in
+      _infra/terraform/databricks/envs/<env>/variables.tf.
+    capabilities:
+      - genie_onboarding
+    genie_onboarding:
+      variables_path_template: "_infra/terraform/databricks/envs/{env}/variables.tf"
+      variable_name: "genie_org_ids"
+      region_env_map:
+        NAM: prod-us-west-2
+        US: prod-us-west-2
+        PROD-US-WEST-2: prod-us-west-2
+        PROD-US-EAST-1: prod-us-east-1
+        US-EAST: prod-us-east-1
+        EMEA: prod-eu
+        EU: prod-eu
+        PROD-EU: prod-eu
+        APAC: prod-ap
+        AP: prod-ap
+        PROD-AP: prod-ap
+        STAGING: staging
+        STAGE: staging
+        SANDBOX: sandbox
+
+  finops-ai-assistant:
+    github_repo: flexera/finops-ai-assistant
+    local_path: /Users/psingh/Desktop/Workyard/finops-ai-assistant
+    base_branch: main
+    description: >
+      FinOps AI Assistant multi-agent product codebase (planner, cco_genie,
+      cco_advisory, cco_customization, cco_dashboard, cco_recommendations,
+      flexdocs, chat_service, platform_libs).
+    capabilities:
+      - bug_investigation
+      - code_fix
+    test_command: "pytest -q"
