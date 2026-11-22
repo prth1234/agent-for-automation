@@ -3,10 +3,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from agents_for_automation.agents.support_ticket.workflow import SupportTicketWorkflow
 from agents_for_automation.config import Settings
-from agents_for_automation.core.connectors.github import GitHubConnector
-from agents_for_automation.core.connectors.jira import JiraConnector
-from agents_for_automation.core.connectors.notifier import NotifierConnector
 from agents_for_automation.core.models import (
     RepoConfig,
     TicketClassification,
@@ -16,7 +14,9 @@ from agents_for_automation.core.models import (
 )
 from agents_for_automation.core.registry import RepoRegistry
 from agents_for_automation.core.state import TicketStateStore
-from agents_for_automation.workflows.support_ticket.workflow import SupportTicketWorkflow
+from agents_for_automation.integrations.github import GitHubConnector
+from agents_for_automation.integrations.jira import JiraConnector
+from agents_for_automation.integrations.notifier import NotifierConnector
 
 SAMPLE_TFVARS = """\
 variable "genie_org_ids" {

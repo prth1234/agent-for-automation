@@ -27,7 +27,6 @@ def resolve_env_name(region_or_env: str, region_env_map: dict[str, str]) -> str 
     normalized = region_or_env.strip().upper()
     if normalized in region_env_map:
         return region_env_map[normalized]
-    # Also allow direct lowercase env names present as map values
     lower = region_or_env.strip().lower()
     if lower in region_env_map.values():
         return lower

@@ -1,0 +1,17 @@
+name: my_agent
+version: 0.1.0
+description: Short one-line summary of what this agent automates
+category: general
+status: draft
+triggers:
+  - cli
+permissions:
+  - llm:invoke
+inputs:
+  - name: query
+    type: string
+    required: true
+    description: Input text or identifier for the agent
+config_files: []
+estimated_time_saved_minutes: 15
+entrypoint: agent:create_agent

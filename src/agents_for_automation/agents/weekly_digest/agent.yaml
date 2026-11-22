@@ -1,0 +1,24 @@
+name: weekly_digest
+version: 0.1.0
+description: Summarise recent tickets, PRs, or team metrics into a clean digest notification
+category: productivity
+status: beta
+triggers:
+  - schedule:weekly
+  - cli
+permissions:
+  - ses:send
+  - teams:write
+inputs:
+  - name: team
+    type: string
+    required: false
+    description: Team name for the digest header (e.g. Thorium)
+    default: Thorium
+  - name: json
+    type: path
+    required: false
+    description: Path to a JSON file with 'team', 'tickets', and 'prs' lists
+config_files: []
+estimated_time_saved_minutes: 20
+entrypoint: agent:create_agent

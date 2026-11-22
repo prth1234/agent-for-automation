@@ -4,7 +4,7 @@ from __future__ import annotations
 from typing import Any
 
 from agents_for_automation.config import Settings
-from agents_for_automation.core.connectors.notifier import NotifierConnector
+from agents_for_automation.integrations.notifier import NotifierConnector
 
 
 class _FakeSESClient:

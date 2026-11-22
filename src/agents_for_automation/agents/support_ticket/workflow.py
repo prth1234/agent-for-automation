@@ -1,11 +1,18 @@
 """Main Support Ticket Automation workflow orchestrator."""
 from __future__ import annotations
 
+from pathlib import Path
+
+from agents_for_automation.agents.support_ticket.classifier import TicketClassifier
+from agents_for_automation.agents.support_ticket.handlers.code_investigation import (
+    investigate_bug,
+)
+from agents_for_automation.agents.support_ticket.handlers.genie_onboarding import (
+    add_genie_org_id,
+)
 from agents_for_automation.config import Settings
-from agents_for_automation.core.connectors.github import GitHubConnector, build_branch_name
-from agents_for_automation.core.connectors.jira import JiraConnector
-from agents_for_automation.core.connectors.notifier import NotifierConnector
 from agents_for_automation.core.models import (
+    RepoConfig,
     TicketContext,
     TicketIntent,
     TicketStatus,
@@ -13,13 +20,9 @@ from agents_for_automation.core.models import (
 )
 from agents_for_automation.core.registry import RepoRegistry
 from agents_for_automation.core.state import TicketStateStore
-from agents_for_automation.workflows.support_ticket.classifier import TicketClassifier
-from agents_for_automation.workflows.support_ticket.handlers.code_investigation import (
-    investigate_bug,
-)
-from agents_for_automation.workflows.support_ticket.handlers.genie_onboarding import (
-    add_genie_org_id,
-)
+from agents_for_automation.integrations.github import GitHubConnector, build_branch_name
+from agents_for_automation.integrations.jira import JiraConnector
+from agents_for_automation.integrations.notifier import NotifierConnector
 
 
 class SupportTicketWorkflow:
@@ -121,15 +124,10 @@ class SupportTicketWorkflow:
     def _handle_genie_onboarding(
         self,
         ticket: TicketContext,
-        repo: object,
+        repo: RepoConfig,
         org_id: str,
         region_or_env: str,
     ) -> WorkflowResult:
-        from agents_for_automation.core.models import RepoConfig
-
-        assert isinstance(repo, RepoConfig)
-        from pathlib import Path
-
         self._github.ensure_repo_ready(
             repo_path=Path(repo.local_path),
             github_repo=repo.github_repo,
@@ -172,7 +170,7 @@ class SupportTicketWorkflow:
             f"- File: `{update.relative_file_path}`\n"
         )
         pr_url = self._github.create_pr_from_working_tree(
-            repo_path=__import__("pathlib").Path(repo.local_path),
+            repo_path=Path(repo.local_path),
             github_repo=repo.github_repo,
             base_branch=repo.base_branch,
             ticket_key=ticket.ticket_key,
@@ -195,12 +193,7 @@ class SupportTicketWorkflow:
             changed_files=[update.relative_file_path],
         )
 
-    def _handle_bug_investigation(self, ticket: TicketContext, repo: object) -> WorkflowResult:
-        from agents_for_automation.core.models import RepoConfig
-
-        assert isinstance(repo, RepoConfig)
-        from pathlib import Path
-
+    def _handle_bug_investigation(self, ticket: TicketContext, repo: RepoConfig) -> WorkflowResult:
         self._github.ensure_repo_ready(
             repo_path=Path(repo.local_path),
             github_repo=repo.github_repo,
@@ -221,7 +214,7 @@ class SupportTicketWorkflow:
                 f"**Fix summary:** {report.proposed_fix_summary}\n"
             )
             pr_url = self._github.create_pr_from_working_tree(
-                repo_path=__import__("pathlib").Path(repo.local_path),
+                repo_path=Path(repo.local_path),
                 github_repo=repo.github_repo,
                 base_branch=repo.base_branch,
                 ticket_key=ticket.ticket_key,

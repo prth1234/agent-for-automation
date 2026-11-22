@@ -3,11 +3,11 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from agents_for_automation.core.models import RepoConfig
-from agents_for_automation.workflows.support_ticket.handlers.genie_onboarding import (
+from agents_for_automation.agents.support_ticket.handlers.genie_onboarding import (
     add_genie_org_id,
     resolve_env_name,
 )
+from agents_for_automation.core.models import RepoConfig
 
 SAMPLE_TFVARS = """\
 variable "genie_org_ids" {

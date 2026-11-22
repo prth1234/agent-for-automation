@@ -1,0 +1,21 @@
+{
+  "team": "Thorium",
+  "tickets": [
+    {
+      "key": "SQ-32775",
+      "summary": "Enable FlexAI on NAM org 60030",
+      "status": "PR_OPENED"
+    },
+    {
+      "key": "SQ-32801",
+      "summary": "Investigate Genie Space timeout in EMEA",
+      "status": "ESCALATED"
+    }
+  ],
+  "prs": [
+    {
+      "title": "[SQ-32775] Enable Genie Space for prod-us-west-2 org 60030",
+      "url": "https://github.com/flexera/cco-databricks/pull/412"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: support_ticket
+version: 0.1.0
+description: Triage Jira support tickets, onboard orgs in Terraform, investigate bugs, and open PRs
+category: engineering
+status: stable
+triggers:
+  - webhook:jira
+  - cli
+permissions:
+  - jira:read
+  - jira:write
+  - github:pr
+  - ses:send
+  - bedrock:invoke
+inputs:
+  - name: ticket
+    type: string
+    required: false
+    description: Jira ticket key to fetch and process (e.g. SQ-32775)
+  - name: json
+    type: path
+    required: false
+    description: Path to a local TicketContext JSON payload
+config_files:
+  - config/repos.yaml
+estimated_time_saved_minutes: 30
+entrypoint: agent:create_agent
