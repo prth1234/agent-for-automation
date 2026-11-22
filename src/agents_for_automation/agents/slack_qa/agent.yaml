@@ -1,7 +1,7 @@
 name: slack_qa
 version: 0.1.0
 description: Answer Slack questions grounded in internal SOPs with exact source citations
-category: knowledge
+category: chatops
 status: beta
 triggers:
   - cli

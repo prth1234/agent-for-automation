@@ -51,9 +51,9 @@
   <text class="m fg" x="328" y="44" font-size="16" font-weight="600">weekly_digest</text>
   <text x="328" y="72" font-size="13" class="mut">Summarise tickets, PRs and metrics</text>
   <text x="328" y="90" font-size="13" class="mut">into a weekly digest.</text>
-  <rect x="328" y="110" width="88" height="24" rx="12" fill="none" class="cyan-s" stroke-width="1.2"/>
-  <text x="372" y="126" text-anchor="middle" font-size="11.5" font-weight="600" class="cyan">productivity</text>
-  <text class="m mut" x="426" y="126" font-size="12">~20m saved / run</text>
+  <rect x="328" y="110" width="76" height="24" rx="12" fill="none" class="cyan-s" stroke-width="1.2"/>
+  <text x="366" y="126" text-anchor="middle" font-size="11.5" font-weight="600" class="cyan">reporting</text>
+  <text class="m mut" x="414" y="126" font-size="12">~20m saved / run</text>
 
   <rect x="614" y="10" width="284" height="142" rx="12" fill="none" class="indigo-s pulse" style="animation-delay:1.2s"/>
   <circle cx="876" cy="36" r="4" class="indigo dot-live" style="animation-delay:1.2s"/>
@@ -61,7 +61,7 @@
   <text x="634" y="72" font-size="13" class="mut">Extract and validate invoice fields</text>
   <text x="634" y="90" font-size="13" class="mut">into accounting payloads.</text>
   <rect x="634" y="110" width="66" height="24" rx="12" fill="none" class="indigo-s" stroke-width="1.2"/>
-  <text x="667" y="126" text-anchor="middle" font-size="11.5" font-weight="600" class="indigo">finance</text>
+  <text x="667" y="126" text-anchor="middle" font-size="11.5" font-weight="600" class="indigo">parsing</text>
   <text class="m mut" x="710" y="126" font-size="12">~25m saved / run</text>
 
   <!-- Row 2 -->
@@ -70,9 +70,9 @@
   <text class="m fg" x="22" y="208" font-size="16" font-weight="600">doc_generator</text>
   <text x="22" y="236" font-size="13" class="mut">Draft resolutions, letters and</text>
   <text x="22" y="254" font-size="13" class="mut">filings from templates.</text>
-  <rect x="22" y="274" width="54" height="24" rx="12" fill="none" class="cyan-s" stroke-width="1.2"/>
-  <text x="49" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="cyan">legal</text>
-  <text class="m mut" x="86" y="290" font-size="12">~35m saved / run</text>
+  <rect x="22" y="274" width="78" height="24" rx="12" fill="none" class="cyan-s" stroke-width="1.2"/>
+  <text x="61" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="cyan">templates</text>
+  <text class="m mut" x="110" y="290" font-size="12">~35m saved / run</text>
 
   <rect x="308" y="174" width="284" height="142" rx="12" fill="none" class="indigo-s pulse" style="animation-delay:2.4s"/>
   <circle cx="570" cy="200" r="4" class="indigo dot-live" style="animation-delay:2.4s"/>
@@ -80,7 +80,7 @@
   <text x="328" y="236" font-size="13" class="mut">Flag missing, expired or</text>
   <text x="328" y="254" font-size="13" class="mut">inconsistent documents.</text>
   <rect x="328" y="274" width="84" height="24" rx="12" fill="none" class="indigo-s" stroke-width="1.2"/>
-  <text x="370" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="indigo">governance</text>
+  <text x="370" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="indigo">validation</text>
   <text class="m mut" x="422" y="290" font-size="12">~30m saved / run</text>
 
   <rect x="614" y="174" width="284" height="142" rx="12" fill="none" class="emerald-s pulse" style="animation-delay:3.0s"/>
@@ -88,7 +88,7 @@
   <text class="m fg" x="634" y="208" font-size="16" font-weight="600">slack_qa</text>
   <text x="634" y="236" font-size="13" class="mut">Answer staff questions from SOPs,</text>
   <text x="634" y="254" font-size="13" class="mut">with exact source citations.</text>
-  <rect x="634" y="274" width="82" height="24" rx="12" fill="none" class="emerald-s" stroke-width="1.2"/>
-  <text x="675" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="emerald">knowledge</text>
-  <text class="m mut" x="726" y="290" font-size="12">~10m saved / run</text>
+  <rect x="634" y="274" width="68" height="24" rx="12" fill="none" class="emerald-s" stroke-width="1.2"/>
+  <text x="668" y="290" text-anchor="middle" font-size="11.5" font-weight="600" class="emerald">chatops</text>
+  <text class="m mut" x="712" y="290" font-size="12">~10m saved / run</text>
 </svg>

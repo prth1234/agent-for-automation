@@ -1,7 +1,7 @@
 name: doc_generator
 version: 0.1.0
 description: Generate structured legal and compliance Markdown documents from templates and JSON payloads
-category: legal
+category: templates
 status: beta
 triggers:
   - cli

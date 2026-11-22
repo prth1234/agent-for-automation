@@ -1,7 +1,7 @@
 name: compliance_check
 version: 0.1.0
 description: Verify submitted compliance documents against built-in or custom rulesets for completeness, consistency, and expiration
-category: governance
+category: validation
 status: beta
 triggers:
   - cli

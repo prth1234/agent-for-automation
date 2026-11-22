@@ -1,7 +1,7 @@
 name: invoice_extraction
 version: 0.1.0
 description: Extract, validate, and structure invoice data from JSON or raw text for accounting
-category: finance
+category: parsing
 status: beta
 triggers:
   - cli

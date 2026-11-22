@@ -1,7 +1,7 @@
 name: weekly_digest
 version: 0.1.0
 description: Summarise recent tickets, PRs, or team metrics into a clean digest notification
-category: productivity
+category: reporting
 status: beta
 triggers:
   - schedule:weekly
