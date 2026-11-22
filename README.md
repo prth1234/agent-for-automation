@@ -1,5 +1,6 @@
 <div align="center">
   <img src="docs/assets/hero.svg" alt="Agents for Automation" width="100%" />
+  <p><a href="https://prth1234.github.io/agent-for-automation/">Interactive site and agent explorer</a></p>
 </div>
 
 <br/>

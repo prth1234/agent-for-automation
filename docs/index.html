@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agents for Automation</title>
+<meta name="color-scheme" content="dark light">
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--mut:#8b949e;--bd:rgba(255,255,255,.14);--ac:#8ea2ff;--ac2:#22d3ee;--ok:#34d399;--warn:#fbbf24;--code:rgba(255,255,255,.04);--f:-apple-system,BlinkMacSystemFont,"SF Pro Display",Inter,"Segoe UI",Helvetica,Arial,sans-serif;--m:"SF Mono",ui-monospace,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#fff;--fg:#1f2328;--mut:#59636e;--bd:rgba(0,0,0,.16);--ac:#4f46e5;--ac2:#0891b2;--ok:#059669;--warn:#b45309;--code:rgba(0,0,0,.04)}}
+:root[data-theme=light]{--bg:#fff;--fg:#1f2328;--mut:#59636e;--bd:rgba(0,0,0,.16);--ac:#4f46e5;--ac2:#0891b2;--ok:#059669;--warn:#b45309;--code:rgba(0,0,0,.04)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--f);-webkit-font-smoothing:antialiased}
+a{color:var(--ac)}button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:8px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.brand{font-weight:650;letter-spacing:-.3px;margin-right:auto}
+nav a.l{color:var(--mut);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent}
+nav a.l:hover,nav a.l.on{color:var(--fg);border-color:var(--ac)}
+.btn{background:none;border:1px solid var(--bd);border-radius:999px;padding:6px 14px;font-size:13px;transition:.2s}
+.btn:hover{border-color:var(--ac);box-shadow:0 0 18px -6px var(--ac)}
+header{text-align:center;padding:88px 0 40px}
+h1{font-size:clamp(38px,8vw,72px);line-height:1.05;letter-spacing:-2.5px;margin:0;font-weight:700;background:linear-gradient(90deg,var(--fg),var(--ac) 60%,var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px color-mix(in srgb,var(--ac) 35%,transparent))}
+.sub{color:var(--mut);font-size:20px;margin:14px 0 0}
+#tag{color:var(--ac);font-size:20px;font-weight:500;height:32px;margin:14px 0 22px;transition:opacity .4s,transform .4s}
+#tag.out{opacity:0;transform:translateY(-8px)}
+.pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{border:1px solid var(--bd);border-radius:999px;padding:4px 14px;font-size:13px;color:var(--mut)}
+section{padding:56px 0}
+h2{font-size:30px;letter-spacing:-.8px;margin:0 0 6px}
+.lead{color:var(--mut);margin:0 0 28px;max-width:60ch}
+.term{border:1px solid var(--bd);border-radius:20px;margin-top:36px;text-align:left}
+.tb{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--bd);font-size:13px;color:var(--mut)}
+.tb .sp{margin-left:auto;display:flex;gap:8px}
+.tb button{background:none;border:1px solid var(--bd);border-radius:999px;padding:2px 12px;font-size:12px}
+.tb button:hover{border-color:var(--ac)}
+pre{font:13.5px/1.7 var(--m);margin:0;overflow:auto}
+#tm{padding:16px 20px;min-height:230px;white-space:pre-wrap}
+.pr{color:var(--ok)}.dm{color:var(--mut)}.cur{display:inline-block;width:8px;height:15px;background:var(--ac);vertical-align:-2px;animation:b 1s steps(2) infinite}
+@keyframes b{50%{opacity:0}}
+.flow{display:flex;gap:10px;flex-wrap:wrap}
+.node{flex:1 1 130px;text-align:left;background:none;border:1px solid var(--bd);border-radius:18px;padding:14px 16px;transition:.25s}
+.node small{display:block;color:var(--mut);font-size:12px}.node b{font-size:15px}
+.node:hover{border-color:var(--ac)}
+.node.on{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac),0 0 28px -8px var(--ac)}
+.node.done small{color:var(--ok)}
+.bar{height:2px;background:var(--bd);margin:16px 0;border-radius:2px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:width .4s}
+.panel{border:1px solid var(--bd);border-radius:20px;display:grid;grid-template-columns:1fr 1.2fr;overflow:hidden}
+.panel>div{padding:22px}.panel h3{margin:0 0 6px;font-size:20px;letter-spacing:-.4px}.panel p{color:var(--mut);margin:0}
+.panel .code{border-left:1px solid var(--bd);position:relative}
+.ctl{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;align-items:center}.ctl .hint{color:var(--mut);font-size:13px;margin-left:auto}
+.search{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+input[type=search]{flex:1 1 240px;background:none;border:1px solid var(--bd);border-radius:999px;padding:10px 18px;color:var(--fg);font:inherit}
+input[type=search]:focus{outline:none;border-color:var(--ac);box-shadow:0 0 22px -8px var(--ac)}
+.chip{background:none;border:1px solid var(--bd);border-radius:999px;padding:8px 16px;font-size:14px}
+.chip[aria-pressed=true]{border-color:var(--ac);color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{border:1px solid var(--bd);border-radius:20px;padding:20px;transition:.25s;position:relative;overflow:hidden}
+.card:hover,.card:focus-within{transform:translateY(-3px);border-color:var(--c);box-shadow:0 0 30px -10px var(--c)}
+.card h3{font:600 16px var(--m);margin:0 0 6px}.card p{color:var(--mut);margin:0 0 14px;font-size:14.5px}
+.st{display:inline-block;border:1px solid var(--c);color:var(--c);border-radius:999px;padding:1px 12px;font-size:12px;font-weight:600}
+.more{max-height:0;opacity:0;transition:.3s;font-size:13px;color:var(--mut)}
+.card:hover .more,.card:focus-within .more{max-height:90px;opacity:1;margin-top:12px}
+.more code{font-family:var(--m);color:var(--fg)}
+.card.planned{opacity:.7}
+#empty{display:none;color:var(--mut);padding:24px;border:1px dashed var(--bd);border-radius:20px;text-align:center}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{background:none;border:1px solid var(--bd);border-radius:999px;padding:8px 18px;font-size:14px}
+.tab[aria-selected=true]{border-color:var(--ac);color:var(--ac);box-shadow:0 0 20px -8px var(--ac)}
+.cb{border:1px solid var(--bd);border-radius:20px;position:relative}.cb pre{padding:20px 90px 20px 20px}
+.cp{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--bd);border-radius:999px;padding:3px 12px;font-size:12px}
+.cp:hover{border-color:var(--ac)}.cp.ok{border-color:var(--ok);color:var(--ok)}
+footer{border-top:1px solid var(--bd);padding:44px 0;text-align:center}
+footer b{display:block;font-size:30px;letter-spacing:-1px;background:linear-gradient(90deg,var(--fg),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+footer span{color:var(--mut)}
+@media (max-width:720px){.panel{grid-template-columns:1fr}.panel .code{border-left:0;border-top:1px solid var(--bd)}nav a.l{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><span class="brand">AFA</span>
+<a class="l" href="#how">How it works</a><a class="l" href="#agents">Agents</a><a class="l" href="#start">Quick start</a>
+<button class="btn" id="theme" aria-label="Toggle light and dark theme">Theme</button></div></nav>
+
+<header><div class="wrap">
+<h1>Agents for Automation</h1>
+<p class="sub">A marketplace of plug-and-play workflow agents</p>
+<div id="tag" aria-live="polite">Triage tickets automatically</div>
+<div class="pills"><span class="pill">Python 3.11+</span><span class="pill">FastAPI</span><span class="pill">AWS Bedrock</span><span class="pill">MIT License</span></div>
+<div class="term" role="region" aria-label="Terminal demo">
+<div class="tb"><span>afa, sample session</span><span class="sp"><button id="replay">Replay</button><button id="skip">Skip</button></span></div>
+<pre id="tm"></pre></div>
+</div></header>
+
+<section id="how"><div class="wrap">
+<h2>How a ticket becomes a pull request</h2>
+<p class="lead">Step through the support ticket agent. Use the buttons, click a stage, or press the left and right arrow keys.</p>
+<div class="flow" id="flow"></div>
+<div class="bar"><i id="prog"></i></div>
+<div class="panel"><div><h3 id="pt"></h3><p id="pd"></p>
+<div class="ctl"><button class="btn" id="prev">Previous</button><button class="btn" id="play">Play</button><button class="btn" id="next">Next</button><span class="hint">Illustrative output</span></div></div>
+<div class="code"><pre id="pc" style="padding:22px"></pre></div></div>
+</div></section>
+
+<section id="agents"><div class="wrap">
+<h2>Agent marketplace</h2>
+<p class="lead">Each agent is a self-contained module. Hover or focus a card to see what it takes and what it returns.</p>
+<div class="search"><input type="search" id="q" placeholder="Search agents" aria-label="Search agents">
+<button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="stable" aria-pressed="false">Stable</button><button class="chip" data-f="beta" aria-pressed="false">Beta</button><button class="chip" data-f="planned" aria-pressed="false">Planned</button></div>
+<div class="grid" id="grid"></div><div id="empty">No agents match your search. Try a shorter word or clear the filter.</div>
+</div></section>
+
+<section id="start"><div class="wrap">
+<h2>Quick start</h2>
+<p class="lead">Pick a task. The tab is saved in the link, so you can share it.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="cb"><button class="cp" id="cp">Copy</button><pre id="cc"></pre></div>
+</div></section>
+
+<footer><div class="wrap"><b>Build once. Reuse everywhere.</b><span>Add an agent, and the whole team can use it.</span></div></footer>
+
+<script>
+const $=s=>document.querySelector(s),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+// theme
+const root=document.documentElement;try{const t=localStorage.getItem("t");if(t)root.dataset.theme=t}catch(e){}
+$("#theme").onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==="dark":!matchMedia("(prefers-color-scheme:light)").matches;root.dataset.theme=dark?"light":"dark";try{localStorage.setItem("t",root.dataset.theme)}catch(e){}};
+// tagline
+const tags=["Triage tickets automatically","Open pull requests while you sleep","Install an agent in one command","Build once. Reuse everywhere."];let ti=0;
+if(!rm)setInterval(()=>{const e=$("#tag");e.classList.add("out");setTimeout(()=>{ti=(ti+1)%tags.length;e.textContent=tags[ti];e.classList.remove("out")},400)},3200);
+// terminal
+const script=[["afa list",["support_ticket   stable","weekly_digest    beta"]],["afa info support_ticket",["triggers: jira webhook, cli","config:   config/repos.yaml"]],["afa run support_ticket --ticket SQ-123",["classified: genie_onboarding","pull request opened, Jira updated"]]];
+let run=0;const tm=$("#tm");
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function full(){tm.innerHTML=script.map(([c,o])=>`<span class="pr">$</span> ${esc(c)}\n<span class="dm">${o.map(esc).join("\n")}</span>\n`).join("\n")}
+async function type(){const id=++run;if(rm){full();return}tm.innerHTML="";
+for(const [c,o] of script){if(id!==run)return;tm.innerHTML+='<span class="pr">$</span> ';
+for(const ch of c){if(id!==run)return;tm.innerHTML+=esc(ch);await sleep(32)}
+tm.innerHTML+="\n";await sleep(350);tm.innerHTML+=`<span class="dm">${o.map(esc).join("\n")}</span>\n\n`;await sleep(500)}
+if(id===run)tm.innerHTML+='<span class="pr">$</span> <span class="cur"></span>'}
+$("#replay").onclick=type;$("#skip").onclick=()=>{run++;full()};type();
+// flow
+const steps=[["Webhook","Jira sends the ticket","A new SQ ticket reaches the AFA server through the Jira webhook.","POST /webhooks/jira\n{ \"issue\": { \"key\": \"SQ-123\" } }"],
+["Registry","AFA finds the agent","The registry scans each agent.yaml and loads the matching agent.","registry.resolve(\"support_ticket\")\n-> agents/support_ticket/agent.yaml"],
+["Classify","The LLM labels it","The classifier picks a label so the right handler runs.","label: genie_onboarding\nothers: bug_investigation, unknown"],
+["Handle","Change code, open PR","The handler looks up the repo in config/repos.yaml, edits it and opens a pull request.","repo: from config/repos.yaml\nadd org 4821 to Terraform\nopen pull request"],
+["Notify","Jira and email updated","Jira gets the pull request link and the team is notified.","Jira comment: pull request link\nemail: team notified"],
+["Record","State saved, human reviews","The ticket state is stored so it never runs twice. A person reviews the pull request.","SQ-123 stored -> skipped next time\npull request waits for review"]];
+let cur=0,timer=null;const fl=$("#flow");
+fl.innerHTML=steps.map((s,i)=>`<button class="node" data-i="${i}"><small>Step ${i+1}</small><b>${s[0]}</b></button>`).join("");
+function show(i){cur=(i+steps.length)%steps.length;const s=steps[cur];
+fl.querySelectorAll(".node").forEach((n,k)=>{n.classList.toggle("on",k===cur);n.classList.toggle("done",k<cur)});
+$("#pt").textContent=s[1];$("#pd").textContent=s[2];$("#pc").textContent=s[3];$("#prog").style.width=((cur+1)/steps.length*100)+"%"}
+fl.onclick=e=>{const n=e.target.closest(".node");if(n){stop();show(+n.dataset.i)}};
+function stop(){clearInterval(timer);timer=null;$("#play").textContent="Play"}
+$("#play").onclick=()=>{if(timer)return stop();$("#play").textContent="Pause";timer=setInterval(()=>show(cur+1),2400)};
+$("#next").onclick=()=>{stop();show(cur+1)};$("#prev").onclick=()=>{stop();show(cur-1)};
+addEventListener("keydown",e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;if(e.key==="ArrowRight"){stop();show(cur+1)}if(e.key==="ArrowLeft"){stop();show(cur-1)}});
+show(0);
+// agents
+const A=[["support_ticket","stable","Triage Jira tickets, open PRs for fixes and onboarding.","Jira ticket key or webhook","Pull request and Jira update","afa run support_ticket"],
+["weekly_digest","beta","Summarise tickets, PRs and metrics into a weekly digest.","Time range","Digest notification","afa run weekly_digest"],
+["invoice_extraction","planned","Read PDFs, validate fields and push results to accounting.","PDF invoices","Validated records",""],
+["doc_generator","planned","Draft resolutions, letters and filings from templates.","Template and fields","Draft document",""],
+["compliance_check","planned","Flag missing or inconsistent documents before review.","Document set","Issue report",""],
+["slack_qa","planned","Answer staff questions from internal SOPs, with sources.","A question","Answer with sources",""]];
+const col={stable:"var(--ok)",beta:"var(--warn)",planned:"var(--mut)"};let f="all";
+function draw(){const q=$("#q").value.trim().toLowerCase();const r=A.filter(a=>(f==="all"||a[1]===f)&&(a[0]+a[2]).toLowerCase().includes(q));
+$("#grid").innerHTML=r.map(a=>`<article class="card ${a[1]}" tabindex="0" style="--c:${col[a[1]]}"><h3>${a[0]}</h3><p>${a[2]}</p><span class="st">${a[1]}</span><div class="more">Takes: ${a[3]}<br>Returns: ${a[4]}${a[5]?`<br>Run: <code>${a[5]}</code>`:""}</div></article>`).join("");
+$("#empty").style.display=r.length?"none":"block"}
+$("#q").oninput=draw;document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{f=c.dataset.f;document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===c));draw()});draw();
+// tabs
+const T={run:["Run an agent","afa list\nafa info support_ticket\nafa run support_ticket --ticket SQ-123"],serve:["Start the webhook server","afa serve\n# Jira posts to /webhooks/jira"],build:["Build your own","cp -r src/agents_for_automation/agents/_template \\\n      src/agents_for_automation/agents/my_agent\n# edit agent.yaml and agent.py, then:\nafa list"]};
+const tb=$("#tabs");tb.innerHTML=Object.entries(T).map(([k,v])=>`<button class="tab" role="tab" data-k="${k}">${v[0]}</button>`).join("");
+function tab(k){if(!T[k])k="run";tb.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.k===k));$("#cc").textContent=T[k][1];history.replaceState(null,"","#start-"+k)}
+tb.onclick=e=>{const t=e.target.closest(".tab");if(t)tab(t.dataset.k)};
+tab(location.hash.startsWith("#start-")?location.hash.slice(7):"run");
+$("#cp").onclick=async()=>{const b=$("#cp"),t=$("#cc").textContent;try{await navigator.clipboard.writeText(t)}catch(e){const x=document.createElement("textarea");x.value=t;document.body.append(x);x.select();document.execCommand("copy");x.remove()}b.textContent="Copied";b.classList.add("ok");setTimeout(()=>{b.textContent="Copy";b.classList.remove("ok")},1500)};
+// scroll spy
+const links=[...document.querySelectorAll("nav a.l")];
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe&&document.querySelectorAll("section").forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"}).observe(s));
+</script>
+</body>
+</html>
