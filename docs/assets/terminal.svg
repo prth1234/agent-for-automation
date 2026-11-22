@@ -57,8 +57,8 @@
     <text x="30" y="80"><tspan class="ok">$</tspan><tspan class="fg"> afa list</tspan></text>
   </g>
   <g class="out1">
-    <text x="30" y="102" class="mut">support_ticket   stable   Triage Jira tickets and open PRs</text>
-    <text x="30" y="122" class="mut">weekly_digest    beta     Summarise tickets and PRs into a digest</text>
+    <text x="30" y="102" class="mut">support_ticket      engineering    Triage Jira tickets and open PRs</text>
+    <text x="30" y="122" class="mut">invoice_extraction  finance        Extract and validate invoice fields</text>
   </g>
 
   <g class="cmd2">

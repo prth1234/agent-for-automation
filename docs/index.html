@@ -108,7 +108,7 @@ footer span{color:var(--mut)}
 <h2>Agent marketplace</h2>
 <p class="lead">Each agent is a self-contained module. Hover or focus a card to see what it takes and what it returns.</p>
 <div class="search"><input type="search" id="q" placeholder="Search agents" aria-label="Search agents">
-<button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="stable" aria-pressed="false">Stable</button><button class="chip" data-f="beta" aria-pressed="false">Beta</button><button class="chip" data-f="planned" aria-pressed="false">Planned</button></div>
+<button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="engineering" aria-pressed="false">Engineering</button><button class="chip" data-f="finance" aria-pressed="false">Finance</button><button class="chip" data-f="legal" aria-pressed="false">Legal</button><button class="chip" data-f="governance" aria-pressed="false">Governance</button><button class="chip" data-f="knowledge" aria-pressed="false">Knowledge</button></div>
 <div class="grid" id="grid"></div><div id="empty">No agents match your search. Try a shorter word or clear the filter.</div>
 </div></section>
 
@@ -130,7 +130,7 @@ $("#theme").onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==="dar
 const tags=["Triage tickets automatically","Open pull requests while you sleep","Install an agent in one command","Build once. Reuse everywhere."];let ti=0;
 if(!rm)setInterval(()=>{const e=$("#tag");e.classList.add("out");setTimeout(()=>{ti=(ti+1)%tags.length;e.textContent=tags[ti];e.classList.remove("out")},400)},3200);
 // terminal
-const script=[["afa list",["support_ticket   stable","weekly_digest    beta"]],["afa info support_ticket",["triggers: jira webhook, cli","config:   config/repos.yaml"]],["afa run support_ticket --ticket SQ-123",["classified: genie_onboarding","pull request opened, Jira updated"]]];
+const script=[["afa list",["support_ticket      engineering","invoice_extraction  finance"]],["afa info support_ticket",["triggers: jira webhook, cli","config:   config/repos.yaml"]],["afa run support_ticket --ticket SQ-123",["classified: genie_onboarding","pull request opened, Jira updated"]]];
 let run=0;const tm=$("#tm");
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -160,13 +160,13 @@ $("#next").onclick=()=>{stop();show(cur+1)};$("#prev").onclick=()=>{stop();show(
 addEventListener("keydown",e=>{if(/INPUT|TEXTAREA/.test(e.target.tagName))return;if(e.key==="ArrowRight"){stop();show(cur+1)}if(e.key==="ArrowLeft"){stop();show(cur-1)}});
 show(0);
 // agents
-const A=[["support_ticket","stable","Triage Jira tickets, open PRs for fixes and onboarding.","Jira ticket key or webhook","Pull request and Jira update","afa run support_ticket"],
-["weekly_digest","beta","Summarise tickets, PRs and metrics into a weekly digest.","Time range or JSON","Digest notification","afa run weekly_digest"],
-["invoice_extraction","beta","Extract and validate invoice fields into accounting payloads.","Invoice JSON or text","Validated accounting payload","afa run invoice_extraction"],
-["doc_generator","beta","Draft resolutions, letters and filings from templates.","Template and fields","Rendered Markdown document","afa run doc_generator"],
-["compliance_check","beta","Flag missing, expired or inconsistent documents before review.","Ruleset and document list","Compliance issue report","afa run compliance_check"],
-["slack_qa","beta","Answer staff questions from internal SOPs, with sources.","Question and SOPs","Grounded answer with sources","afa run slack_qa"]];
-const col={stable:"var(--ok)",beta:"var(--warn)",planned:"var(--mut)"};let f="all";
+const A=[["support_ticket","engineering","Triage Jira tickets, open PRs for fixes and onboarding.","Jira ticket key or webhook","Pull request and Jira update","afa run support_ticket (~30m saved)"],
+["weekly_digest","productivity","Summarise tickets, PRs and metrics into a weekly digest.","Time range or JSON","Digest notification","afa run weekly_digest (~20m saved)"],
+["invoice_extraction","finance","Extract and validate invoice fields into accounting payloads.","Invoice JSON or text","Validated accounting payload","afa run invoice_extraction (~25m saved)"],
+["doc_generator","legal","Draft resolutions, letters and filings from templates.","Template and fields","Rendered Markdown document","afa run doc_generator (~35m saved)"],
+["compliance_check","governance","Flag missing, expired or inconsistent documents before review.","Ruleset and document list","Compliance issue report","afa run compliance_check (~30m saved)"],
+["slack_qa","knowledge","Answer staff questions from internal SOPs, with sources.","Question and SOPs","Grounded answer with sources","afa run slack_qa (~10m saved)"]];
+const col={engineering:"var(--ok)",productivity:"var(--ac2)",finance:"var(--ac)",legal:"var(--warn)",governance:"var(--ac)",knowledge:"var(--ok)"};let f="all";
 function draw(){const q=$("#q").value.trim().toLowerCase();const r=A.filter(a=>(f==="all"||a[1]===f)&&(a[0]+a[2]).toLowerCase().includes(q));
 $("#grid").innerHTML=r.map(a=>`<article class="card ${a[1]}" tabindex="0" style="--c:${col[a[1]]}"><h3>${a[0]}</h3><p>${a[2]}</p><span class="st">${a[1]}</span><div class="more">Takes: ${a[3]}<br>Returns: ${a[4]}${a[5]?`<br>Run: <code>${a[5]}</code>`:""}</div></article>`).join("");
 $("#empty").style.display=r.length?"none":"block"}
